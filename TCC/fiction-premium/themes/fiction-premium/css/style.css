@@ -21,7 +21,7 @@ body {
 /* Heading Fonts Size */
 h1, h2, h3 {
   font-family: "Playfair Display", serif;
-  color: #facd8a;
+  color: #FFB4CA;
 }
 
 h1, h2 {
@@ -95,8 +95,8 @@ button:hover, button:focus {
 /* Themefisher Button effect */
 .btn-main {
   border-radius: 0;
-  background: #facd8a;
-  border-color: #facd8a;
+  background: #FFB4CA;
+  border-color: #FFB4CA;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
@@ -108,7 +108,7 @@ button:hover, button:focus {
 .btn-main:hover, .btn-main:focus {
   color: #111111;
   border-color: transparent;
-  background: #fff;
+  background: #FF2A68;
 }
 
 /**/
@@ -226,7 +226,7 @@ button:hover, button:focus {
   bottom: 0;
   height: 3px;
   width: 70px;
-  background: #facd8a;
+  background: #FFB4CA;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -723,7 +723,7 @@ div.loading {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
-  color: #facd8a;
+  color: #FFB4CA;
   font-weight: bold;
 }
 
@@ -1149,7 +1149,7 @@ hr.hr-border {
 ***********************************************/
 .team {
   padding: 65px 0 0;
-  background: #0f0f0f;
+  background: #0f0f0f ;
   overflow-x: hidden;
 }
 
@@ -1170,7 +1170,7 @@ hr.hr-border {
   height: 100%;
   padding: 75px 23px;
   opacity: 0;
-  background: rgba(231, 190, 130, 0.9);
+  background: #FF4C81;
   transition: 0.4s;
 }
 
