@@ -95,8 +95,8 @@ button:hover, button:focus {
 /* Themefisher Button effect */
 .btn-main {
   border-radius: 0;
-  background: #FFB4CA;
-  border-color: #FFB4CA;
+  background: #F08080;
+  border-color: #960233;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
@@ -106,9 +106,9 @@ button:hover, button:focus {
 }
 
 .btn-main:hover, .btn-main:focus {
-  color: #111111;
+  color: #FFF9F5;
   border-color: transparent;
-  background: #FF2A68;
+  background: #960233;
 }
 
 /**/
@@ -156,7 +156,7 @@ button:hover, button:focus {
 
 .solid-btn:hover {
   background: transparent;
-  color: #facd8a;
+  color: #F08080;
 }
 
 .post-count {
@@ -178,7 +178,7 @@ button:hover, button:focus {
   padding: 0;
   background: transparent;
   border-color: transparent;
-  color: #fff;
+  color: #FFF9F5;
   transition: 0.5s;
   position: absolute;
   top: 2px;
@@ -187,7 +187,7 @@ button:hover, button:focus {
 
 .tf-search-btn:hover {
   background: transparent;
-  color: #facd8a;
+  color: #F08080;
   border-color: transparent;
 }
 
@@ -260,14 +260,14 @@ button:hover, button:focus {
   border-radius: 50%;
   cursor: pointer;
   transition: .2s ease;
-  background: #fff;
+  background: #FFF9F5;
   border: 0;
   padding: 0;
   color: transparent;
 }
 
 .slick-dots li.slick-active button {
-  background: #facd8a;
+  background: #F08080;
 }
 
 /* /slick dots */
@@ -278,7 +278,7 @@ button:hover, button:focus {
  */
 /*logo style*/
 .navigation {
-  background: rgba(0, 0, 0, 0.73) none repeat scroll 0 0;
+  background: #141414 none repeat scroll 0 0;
   margin-bottom: 0;
   border-bottom: 0;
   padding: 20px 0;
@@ -298,7 +298,7 @@ button:hover, button:focus {
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #fff;
+  color: #FFF9F5;
   transition: 0.5s;
   position: relative;
 }
@@ -312,12 +312,12 @@ button:hover, button:focus {
   width: 0;
   height: 1px;
   transition: 0.5s;
-  background: #facd8a;
+  background: #F08080;
 }
 
 .menu li a:hover {
   text-decoration: none;
-  color: #facd8a;
+  color: #F08080;
 }
 
 .menu li a:hover:before {
@@ -430,7 +430,7 @@ div.loading {
   position: absolute;
   width: 6px;
   height: 6px;
-  background: #facd8a;
+  background: #F08080;
   left: 0px;
   top: 0px;
   border-radius: 6px;
@@ -602,7 +602,7 @@ div.loading {
   background: #111111;
   font-size: 16px;
   line-height: 29px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #FFF9F5;
 }
 
 .footer a {
@@ -635,7 +635,7 @@ div.loading {
 }
 
 .footer-nav a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #FFF9F5;
   transition: 0.5s;
   padding: 0 4px;
   position: relative;
@@ -650,12 +650,12 @@ div.loading {
   width: 0;
   height: 1px;
   transition: 0.5s;
-  background: #facd8a;
+  background: #F08080;
 }
 
 .footer-nav a:hover {
   text-decoration: none;
-  color: #facd8a;
+  color: #F08080;
 }
 
 .footer-nav a:hover:before {
@@ -671,7 +671,7 @@ div.loading {
 }
 
 .contact-address a:hover {
-  color: #facd8a;
+  color: #F08080;
 }
 
 /* Footer Media Link */
@@ -693,7 +693,7 @@ div.loading {
 }
 
 .footer-media-link a:hover {
-  color: #facd8a;
+  color: #F08080;
 }
 
 .copyright {
@@ -925,7 +925,7 @@ div.loading {
 }
 
 .slick-arrow:hover {
-  background: #facd8a;
+  background: #F08080;
 }
 
 .prevArrow {
@@ -1099,7 +1099,7 @@ hr.hr-border {
 .table:hover .features-list i,
 .table:hover .th-btn-border,
 .table:hover .price {
-  color: #facd8a;
+  color: #F08080;
 }
 
 .table:hover .table-price {
@@ -1127,14 +1127,14 @@ hr.hr-border {
 }
 
 .border-effect:before {
-  border-bottom: 1px solid #facd8a;
-  border-left: 1px solid #facd8a;
+  border-bottom: 1px solid #F08080;
+  border-left: 1px solid #F08080;
   -webkit-transform-origin: 0 100%;
 }
 
 .border-effect:after {
-  border-top: 1px solid #facd8a;
-  border-right: 1px solid #facd8a;
+  border-top: 1px solid #F08080;
+  border-right: 1px solid #F08080;
   -webkit-transform-origin: 100% 0%;
 }
 
@@ -1254,7 +1254,7 @@ hr.hr-border {
   left: 0px;
   bottom: 0px;
   right: 0px;
-  background: #facd8a;
+  background: #F08080;
   opacity: 0;
   transition: 0.5s;
 }
@@ -1264,7 +1264,7 @@ hr.hr-border {
 }
 
 .service-item:hover .services-icon {
-  background: #facd8a;
+  background: #F08080;
   box-shadow: 0px 0px 0px 14px #191919;
 }
 
@@ -1290,7 +1290,7 @@ hr.hr-border {
   color: #fff;
   letter-spacing: 1px;
   transition: 0.5s;
-  color: #facd8a;
+  color: #F08080;
 }
 
 .service-title:before {
@@ -1300,7 +1300,7 @@ hr.hr-border {
   bottom: 0;
   height: 3px;
   width: 75px;
-  background: #facd8a;
+  background: #F08080;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -1376,7 +1376,7 @@ hr.hr-border {
 
 .owl-buttons div {
   display: inline-block;
-  border: 3px solid #facd8a;
+  border: 3px solid #F08080;
   border-radius: 2px;
   width: 122px;
   text-indent: -99999px;
@@ -1490,7 +1490,7 @@ hr.hr-border {
 
 .portfolio-thumbnail {
   border-radius: 0;
-  background: #facd8a;
+  background: #F08080;
   border: 0;
   padding: 0;
   position: relative;
@@ -1501,7 +1501,7 @@ hr.hr-border {
 }
 
 .portfolio-caption {
-  background: #facd8a;
+  background: #F08080;
   padding: 20px 23px !important;
 }
 
@@ -1543,14 +1543,14 @@ hr.hr-border {
 }
 
 .protfolio-mixitup-btn .th-btn:hover {
-  background: #facd8a;
+  background: #F08080;
   color: #212121;
 }
 
 .protfolio-mixitup-btn .th-btn:focus {
   outline: none;
   box-shadow: none;
-  background: #facd8a;
+  background: #F08080;
   border-color: transparent;
 }
 
@@ -1660,7 +1660,7 @@ hr.hr-border {
 }
 
 .protfolio-list .web-addres:hover {
-  color: #facd8a;
+  color: #F08080;
 }
 
 .portfolio-single-title {
@@ -1679,7 +1679,7 @@ hr.hr-border {
 }
 
 .gallery-overlay-icon:hover {
-  background: #facd8a;
+  background: #F08080;
   color: #171717;
 }
 
@@ -1769,7 +1769,7 @@ hr.hr-border {
 }
 
 .blog-content a:hover h3 {
-  color: #facd8a;
+  color: #F08080;
 }
 
 .blog-title {
@@ -1783,7 +1783,7 @@ hr.hr-border {
 }
 
 .blog-title:hover {
-  color: #facd8a;
+  color: #F08080;
 }
 
 .blog-description {
@@ -1870,7 +1870,7 @@ hr.hr-border {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 50px;
-  color: #facd8a;
+  color: #F08080;
   transition: 0.5s;
 }
 
@@ -1884,7 +1884,7 @@ hr.hr-border {
 }
 
 .see-all-post a {
-  color: #facd8a;
+  color: #F08080;
 }
 
 .see-all-post a:hover {
@@ -1898,7 +1898,7 @@ hr.hr-border {
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 18px 0;
-  border-bottom: 2px solid #facd8a;
+  border-bottom: 2px solid #F08080;
 }
 
 .blog-sidbar .list-group-item {
@@ -1917,12 +1917,12 @@ hr.hr-border {
 
 .blog-sidbar .list-group-item:hover {
   background: #111111;
-  color: #facd8a;
+  color: #F08080;
 }
 
 .blog-sidbar .list-group-item:focus {
   background: #111111;
-  color: #facd8a;
+  color: #F08080;
 }
 
 .search {
@@ -1958,12 +1958,12 @@ hr.hr-border {
   font-family: "Poppins", sans-serif;
   margin-bottom: 50px;
   display: block;
-  color: #facd8a;
+  color: #F08080;
   transition: 0.5s;
 }
 
 .blog-content-title:hover, .blog-content-title:focus {
-  color: #facd8a;
+  color: #F08080;
 }
 
 .blog-content-description {
@@ -1988,14 +1988,14 @@ hr.hr-border {
 ========================= */
 .comments-title {
   margin: 0;
-  color: #facd8a;
+  color: #F08080;
   margin-top: 75px;
   margin-bottom: 75px;
   letter-spacing: 2px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   padding-bottom: 10px;
-  border-bottom: 1px dashed #facd8a;
+  border-bottom: 1px dashed #F08080;
 }
 
 .blog-left-img {
@@ -2034,14 +2034,14 @@ hr.hr-border {
 }
 
 .comments-author {
-  color: #facd8a;
+  color: #F08080;
   position: relative;
   padding-bottom: 6px;
   display: inline-block;
   transition: 0.5s;
   text-transform: uppercase;
   font-size: 16px;
-  border-bottom: 1px solid #facd8a;
+  border-bottom: 1px solid #F08080;
 }
 
 .comments-body {
@@ -2050,7 +2050,7 @@ hr.hr-border {
 }
 
 .comments-body a:hover .comments-author {
-  color: #facd8a;
+  color: #F08080;
 }
 
 .comments-body a:hover .comments-author:before {
@@ -2072,7 +2072,7 @@ hr.hr-border {
 .blog-form-input:focus,
 .blog-form-textarea:focus {
   box-shadow: none;
-  border: 1px solid #facd8a;
+  border: 1px solid #F08080;
 }
 
 form .padding-left-15 {
@@ -2103,7 +2103,7 @@ form .padding-left-15 {
   border-radius: 0;
   padding: 20px;
   background: transparent;
-  border-color: #facd8a;
+  border-color: #F08080;
   min-height: 70px;
   font-size: 16px;
   width: 100%;
@@ -2164,7 +2164,7 @@ form .padding-left-15 {
 .contact-icon {
   display: inline-block;
   font-size: 30px;
-  color: #facd8a;
+  color: #F08080;
   min-width: 56px;
   line-height: 1;
 }
@@ -2212,7 +2212,7 @@ form .padding-left-15 {
 /* Select 1px to 992px devices */
 @media only screen and (min-width: 1px) and (max-width: 992px) {
   .navigation .navbar-toggle span {
-    background: #fff;
+    background: #FFF9F5;
   }
   .hero-area h1 {
     font-size: 35px;
