@@ -115,11 +115,11 @@ else{
   </nav>
 
 
-  <header class="hero-area th-fullpage" data-parallax="scroll" data-image-src="images/slider/bg-2.jpeg">
+  <header class="hero-area th-fullpage" data-parallax="scroll" data-image-src="images/slider/bg-home.jpeg">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>MODA & MAGIA</h1>
+          <h1></h1>
         </div>
       </div>
     </div>
@@ -240,8 +240,8 @@ else{
           <div class="overlay text-center">
             <div class="content">
               <h4>Bianca Renesto</h4>
-              <span>Creative Director</span>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim.</p>
+              <span>Aluna do 3 ano de desenvolvimento de sistemas</span>
+              <p>Ultimo ano do curso de desenvolvimento de sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
               
             </div>
             <div class="social-media">
@@ -263,8 +263,8 @@ else{
           <div class="overlay text-center">
             <div class="content">
               <h4>Bianca Oliveira</h4>
-              <span>Creative Director</span>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim.</p>
+              <span>Aluna do 3 ano de desenvolvimento de sistemas</span>
+              <p>Ultimo ano do curso de desenvolvimento de sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
               
             </div>
             <div class="social-media">
@@ -286,8 +286,8 @@ else{
           <div class="overlay text-center">
             <div class="content">
               <h4>Luiza Camilo</h4>
-              <span>Creative Director</span>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim.</p>
+              <span>Aluna do 3 ano de desenvolvimento de sistemas</span>
+              <p>Ultimo ano do curso de desenvolvimento de sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
               
             </div>
             <div class="social-media">
@@ -309,8 +309,8 @@ else{
           <div class="overlay text-center">
             <div class="content">
               <h4>Pietra Dini</h4>
-              <span>Creative Director</span>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim.</p>
+              <span>Aluna do 3 ano de desenvolvimento de sistemas</span>
+              <p>Ultimo ano do curso de desenvolvimento de sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
               
             </div>
             <div class="social-media">

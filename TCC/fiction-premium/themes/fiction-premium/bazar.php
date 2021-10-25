@@ -116,11 +116,11 @@ else{
 
   <!-- Portfolio header-section 
   =========================-->
-  <header class="hero-area th-fullpage" data-parallax="scroll" data-image-src="images/slider/bg-2.jpeg">
+  <header class="hero-area th-fullpage" data-parallax="scroll" data-image-src="images/slider/bg-bazar.jpeg">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>BAZAR</h1>
+          <h1></h1>
         </div>
       </div>
     </div>
