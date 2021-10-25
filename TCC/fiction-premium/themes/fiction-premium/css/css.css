@@ -1,59 +1,80 @@
-body{
-    background-color:#111111;
-    font-size:30px;
-    color:#fff;
+
+
+.containera{
+  background: #111111;
+  color:#ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
 }
 .simple-login-container{
-    width:300px;
-    max-width:100%;
-    margin:50px auto;
+  width:300px;
+  max-width:100%;
+  background: #111111;
+
 }
 .simple-login-container h2{
-    text-align:center;
-    font-size:30px;
-    font-family: "Poppins", sans-serif;
-    color: #CC3A5A;
+  text-align:center;
+  font-size:30px;
+  font-family: "Poppins", sans-serif;
+  background: #111111;
+  color: #CC3A5A;
 }
 
 
 .footer {
-    padding: 65px 0 40px;
-    background: #111111;
-    font-size: 16px;
-    line-height: 29px;
-    color: #FFF9F5;
-    
-  }
+  padding: 65px 0 40px;
+  background: #111111;
+  font-size: 16px;
+  line-height: 29px;
+  color: #FFF9F5;
+  margin-top: auto;
+  
+}
 
-  .copyright a {
-    color: #fff;
-    display: inline-block;
-  }
+.copyright a {
+  color: #fff;
+  display: inline-block;
+}
 
-  .btn-main {
-    border-radius: 0;
-    background: #CC3A5A;
-    border-color: #F08080;
-    font-family: "Poppins", sans-serif;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 11px 18px;
-    transition: 0.5s;
-    align-self: center;
-  }
+.btn-main {
+  border-radius: 0;
+  background: #99FFDD;
+  border-color: #FFF9F5;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 11px 18px;
+  transition: 0.5s;
+  align-self: center;
+}
 
-  .btn-main:hover, .btn-main:focus {
-    color: #FFF9F5;
-    border-color: transparent;
-    background: #960233;
-  }
+.btn-main:hover, .btn-main:focus {
+  color: #000000;
+  border-color: transparent;
+  background: #FFBF6A;
+}
 
 .label{
-    font-family: "Poppins", sans-serif;
-    text-align: left;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
 }
 
 .row{
-    text-align: left;
+  text-align: left;
+  background: #111111;
+
 }
+
+.error{
+font-family: "Poppins", sans-serif;
+color: #CC3A5A;
+font-size: 16px;
+text-align: left;
+}
+
+

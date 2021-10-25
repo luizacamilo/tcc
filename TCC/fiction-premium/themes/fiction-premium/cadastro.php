@@ -1,3 +1,20 @@
+<?php
+
+session_start();
+
+
+
+if(isset($_SESSION["erro"])){
+    $erro = $_SESSION["erro"];
+
+}
+else{
+    $erro = 0;
+    
+}
+
+
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
   <head>
@@ -34,69 +51,73 @@
   </head>
       
   <body>
-
-    <div class="simple-login-container">
-        <h2>Cadastre-se!</h2>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="text" name="nome_user" class="form-control" placeholder="Nome">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="email" name="email_user" class="form-control" placeholder="Email">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="date" name="datanasci_user" class="form-control" placeholder="Data de Nascimento">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="password" type="senha_user" placeholder="Senha" class="form-control">
-            </div>
-        </div>
-        <div class="file is-centered is-medium">
-            <span class="label">Gênero</span>
-            <div class="col-md-12 form-group">
-                <label class="radio">
-                    <input name="genero_user" type="radio" >
-                    Feminino
-                </label>
+      <div class="containera">
+        <div class="simple-login-container">
+            <h2>Cadastre-se!</h2>
+            <form method="post" action="gravaCadastro.php"  enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input type="text" name="nome_user" class="form-control" placeholder="Nome">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input type="email" name="email_user" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input type="date" name="datanasci_user" class="form-control" placeholder="Data de Nascimento">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input type="password" name="senha_user" placeholder="Senha" class="form-control">
+                    </div>
+                </div>
+                <div class="file is-centered is-medium">
+                    <span class="label">Gênero</span>
+                    <div class="col-md-12 form-group">
+                        <label class="radio">
+                            <input name="genero_user" value="F" type="radio" >
+                            Feminino
+                        </label>
+                        <br>
+                        <label class="radio">
+                            <input name="genero_user" value="M" type="radio" >
+                            Masculino
+                        </label>            
+                    </div>
+                </div>
+                <div class="file is-centered is-medium">
+                    <label class="label">
+                        <span class="label">
+                            Foto para Perfil   
+                        </span>
+                        <input class="file-input is-large" type="file" name="img_user">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                        </span>
+                    </label>
+                </div>
                 <br>
-                <label class="radio">
-                    <input name="genero_user" type="radio" >
-                    Masculino
-                </label>            
-            </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <span class="label">Já possui conta? <a href="login.php" style="color: #00a76f;">Entrar</a></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input type="submit" class="btn-main" >
+                    </div>
+                </div>
+            </form>
+            
         </div>
-        <div class="file is-centered is-medium">
-            <label class="label">
-                <span class="label">
-                    Foto para Perfil   
-                </span>
-                <input class="file-input is-large" type="file" name="resume">
-                <span class="file-cta">
-                    <span class="file-icon">
-                        <i class="fas fa-upload"></i>
-                    </span>
-                </span>
-            </label>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <span class="label">Já possui conta? <a href="login.php" style="color: #960233;">Entrar</a></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="submit" class="btn-main" >
-            </div>
-        </div>
-        
     </div>
+
     
     <footer class="footer">
             <div class="container">

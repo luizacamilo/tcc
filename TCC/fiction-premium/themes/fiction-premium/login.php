@@ -1,9 +1,26 @@
+<?php
+
+session_start();
+
+
+
+if(isset($_SESSION["erro"])){
+    $erro = $_SESSION["erro"];
+
+}
+else{
+    $erro = 0;
+    
+}
+
+
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Moda & Magia</title>
+    <title>Moda & Magia | Login</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +29,6 @@
 
     <link rel="stylesheet" href="plugins/themefisher-fonts/themefisher-fonts.css">
 
-    <!-- Revolution Slider -->
     <link rel="stylesheet" href="css/css.css">
 
     <!-- Link do icone -->
@@ -34,32 +50,44 @@
   </head>
       
   <body>
+        <div class="containera">
+            <div class="simple-login-container">
+                <h2>Entre em sua Conta!</h2>
+                <form method="post" action="validalogin.php">
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <input type="email" name="email_user" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <input type="password" name="senha_user" placeholder="Senha" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <span class="label">Ainda não tem uma conta? <a href="cadastro.php" style="color: #00a76f;">Cadastre-se</a></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <input type="submit" class="btn-main">
+                        </div>
+                    </div>
+                    <?php
+                    if($erro == 1){
+                    ?>
+                        <p class="error">Email e/ou senha incorretos!</p>
+                    <?php	
 
-    <div class="simple-login-container">
-        <h2>Entre em sua Conta!</h2>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="email" name="email_user" class="form-control" placeholder="Email">
+                        }
+                        
+                    ?>
+                </form>
+                
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="password" type="senha_user" placeholder="Senha" class="form-control">
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <span class="label">Ainda não tem uma conta? <a href="cadastro.php" style="color: #960233;">Cadastre-se</a></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 form-group">
-                <input type="submit" class="btn-main">
-            </div>
-        </div>
-        
-    </div>
     
     <footer class="footer">
             <div class="container">

@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+
+
+
+if(isset($_SESSION["erro"])){
+    $erro = $_SESSION["erro"];
+
+}
+else{
+    $erro = 0;
+    
+}
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
   <head>
@@ -66,30 +81,38 @@
     </div>
   </header>
 
-<nav class="navbar navbar-fixed-top navigation" >
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="index.html">
-        <h3>Moda & Magia</h3>
-      </a>
+  <nav class="navbar navbar-fixed-top navigation" >
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.php">
+          <h3>Moda & Magia</h3>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="closet.php">Closet Virtual</a></li>
+          <li><a href="blog.php">Blog</a></li>
+          <li><a href="bazar.php">Bazar</a></li>
+          <li><a href="contact.php">Contato</a></li>
+          <li><a href="perfil.php" >Perfil</a></li>
+          <?php 
+            if($_SESSION["logado"] == true){
+              ?>
+              <li><a href="sair.php" >Sair</a></li>
+              <?php
+          }
+          ?>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="closet.html">Closet Virtual</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="bazar.html">Bazar</a></li>
-        <li><a href="contact.html">Contato</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
   
 
@@ -100,26 +123,25 @@
           <h2>Postagens Recentes</h2>
         </div>
         <div class="col-md-9">
-
-            <div class="blog-list-section blog-content-right row">
-              <div class="col-md-9 blog-content-area">
-                <div class="blog-img">
-                  <img class="img-responsive" src="images/blog/blog-img1.jpeg" alt="">      
-                </div>
-                <div class="blog-content">
-                  <a href="blog-single.html"><h4 class="blog-title">Moda para mulheres com menos de 1,60m; <br /> Um tutorial por Elle Woods</h4></a>
-                  <div class="meta">
-                    <div class="date">
-                      <p>19</sup>de setembro de 2021</p>
-                    </div>
-                    <div class="author">
-                      <p>por Luiza Camilo</p>
-                    </div>
-                  </div>
-                  <p class="blog-decisions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonum euismod tincidunt ut laoreet dolore magna autem vel eum iriure dolor in.</p>
-                  <a class="btn btn-default th-btn solid-btn" href="blog-single.html" role="button">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
+          <div class="blog-list-section blog-content-right row">
+            <div class="col-md-9 blog-content-area">
+              <div class="blog-img">
+                <img class="img-responsive" src="images/blog/blog-img1.jpeg" alt="">      
               </div>
+              <div class="blog-content">
+                <a href="blog-single.html"><h4 class="blog-title">Moda para mulheres com menos de 1,60m; <br /> Um tutorial por Elle Woods</h4></a>
+                <div class="meta">
+                  <div class="date">
+                    <p>19</sup>de setembro de 2021</p>
+                  </div>
+                  <div class="author">
+                    <p>por Luiza Camilo</p>
+                  </div>
+                </div>
+                <p class="blog-decisions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonum euismod tincidunt ut laoreet dolore magna autem vel eum iriure dolor in.</p>
+                <a class="btn btn-default th-btn solid-btn" href="blog-single.html" role="button">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
             </div>  
             <div class="blog-list-section blog-content-left row">
               <div class="col-md-9 blog-content-area">
@@ -187,58 +209,61 @@
           </div>
         </div>
         <div class="col-md-3">
-          	<div class="blog-sidbar">
-		<div class="search widgets">
-			<form class="form-inline">
-			  <div class="form-group search-input">
-			    <input type="text" class="form-control" placeholder="Search ...">
-			  </div>
-			  <button type="submit" class="btn btn-default tf-search-btn"><i class="tf-search"></i></button>
-			</form>
-		</div>
+          <div class="blog-sidbar">
+            <div class="search widgets">
+              <form class="form-inline">
+                <div class="form-group search-input">
+                  <input type="text" class="form-control" placeholder="Search ...">
+                </div>
+                <button type="submit" class="btn btn-default tf-search-btn"><i class="tf-search"></i></button>
+              </form>
+            </div>
 
-		<div class="related-post widgets">
-			<div class="list-group">
-				<div class="list-group-item active text-center">
-				Postagens relacionadas
-				</div>
-				<a href="#" class="list-group-item">
-					<div class="media">
-					  <div class="media-left media-middle"><p class="post-count">1</p></div>
-					  <div class="media-body">
-					    <p>Tipografia para blogs de moda!</p>
-					  </div>
-					</div>
-				</a>
-				<a href="#" class="list-group-item">
-					<div class="media">
-					  <div class="media-left media-middle"><p class="post-count">2</p></div>
-					  <div class="media-body">
-					    <p>Typography is  important fact for liusto odio dolore.</p>
-					  </div>
-					</div>
-				</a>
-				<a href="#" class="list-group-item">
-					<div class="media">
-					  <div class="media-left media-middle"><p class="post-count">3</p></div>
-					  <div class="media-body">
-					    <p>Typography is  important fact for liusto odio dolore.</p>
-					  </div>
-					</div>
-				</a>
-				<a href="#" class="list-group-item">
-					<div class="media">
-					  <div class="media-left media-middle"><p class="post-count">4</p></div>
-					  <div class="media-body">
-					    <p>Typography is  important fact for liusto odio dolore.</p>
-					  </div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
+            <div class="related-post widgets">
+              <div class="list-group">
+                <div class="list-group-item active text-center">
+                  Postagens relacionadas
+                </div>
+                <a href="#" class="list-group-item">
+                  <div class="media">
+                    <div class="media-left media-middle"><p class="post-count">1</p></div>
+                      <div class="media-body">
+                        <p>Tipografia para blogs de moda!</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item">
+                  <div class="media">
+                    <div class="media-left media-middle"><p class="post-count">2</p></div>
+                      <div class="media-body">
+                        <p>Typography is  important fact for liusto odio dolore.</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item">
+                  <div class="media">
+                    <div class="media-left media-middle"><p class="post-count">3</p></div>
+                      <div class="media-body">
+                        <p>Typography is  important fact for liusto odio dolore.</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item">
+                  <div class="media">
+                    <div class="media-left media-middle"><p class="post-count">4</p></div>
+                      <div class="media-body">
+                        <p>Typography is  important fact for liusto odio dolore.</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
   </section>

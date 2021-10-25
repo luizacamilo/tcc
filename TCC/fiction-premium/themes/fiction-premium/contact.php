@@ -1,9 +1,24 @@
+<?php
+
+session_start();
+
+
+
+if(isset($_SESSION["erro"])){
+    $erro = $_SESSION["erro"];
+
+}
+else{
+    $erro = 0;
+    
+}
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Moda e Magia | Closet Virtual</title>
+    <title>Moda e Magia | Contato</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -66,59 +81,90 @@
   </div> 
 
 
-<nav class="navbar navbar-fixed-top navigation" >
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="index.html">
-        <h3>Moda & Magia</h3>
-      </a>
-    </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="closet.html">Closet Virtual</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="bazar.html">Bazar</a></li>
-        <li><a href="contact.html">Contato</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
-
-<header class="hero-area th-fullpage" data-parallax="scroll" data-image-src="images/slider/bg-2.jpeg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>MEU CLOSET</h1>
+  <nav class="navbar navbar-fixed-top navigation" >
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.php">
+          <h3>Moda & Magia</h3>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="closet.php">Closet Virtual</a></li>
+          <li><a href="blog.php">Blog</a></li>
+          <li><a href="bazar.php">Bazar</a></li>
+          <li><a href="contact.php">Contato</a></li>
+          <li><a href="perfil.php" >Perfil</a></li>
+          <?php 
+            if($_SESSION["logado"] == true){
+              ?>
+              <li><a href="sair.php" >Sair</a></li>
+              <?php
+          }
+          ?>
+        </ul>
       </div>
     </div>
-  </div>
-</header>
+  </nav>
 
 
-  <section class="services">
+  <header class="hero-area th-fullpage" data-parallax="scroll" data-image-src="images/slider/bg-2.jpeg">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="title text-center">
-            <h2>Closet Virtual</h2>
-          </div>
+          <h1>CONTATO</h1>
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
 
 
+ <!-- Contact From Study Sections 
+  =========================-->
+ <section class="contact-form">
+   <div class="container">
+     <div class="row">
+       <div class="title text-center">
+         <h2>Contato</h2>
+       </div>
+       <form class="" method="post" action="mandaEmail.php">
+            <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" name="subject" class="form-control" placeholder="Assunto">
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control" placeholder="E-mail">
+                </div>
+                  <div class="form-group margin-0">
+                    <input type="text" name="nome" class="form-control" placeholder="Nome">
+                  </div>
+                </div>
+                <div class="col-md-6 margin-0">
+                  <div class="form-group">
+                    <textarea class="form-control" name="msg" rows="3" placeholder="Mensagem"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="contact-btn text-center">
+                    <input class="btn btn-default btn-main" type="submit" value="Enviar Mensagem">
+                  </div>
+                </div>
+            </div>
+       </form>
+     </div>
+   </div>
+ </section>
 
-<footer class="footer">
+ <footer class="footer">
   <div class="container">
       <div class="row">
           <div class="text-center">
@@ -154,7 +200,3 @@
     </body>
 
     </html>
-
-
-
-  

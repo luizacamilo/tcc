@@ -1,9 +1,24 @@
+<?php
+
+session_start();
+
+
+
+if(isset($_SESSION["erro"])){
+    $erro = $_SESSION["erro"];
+
+}
+else{
+    $erro = 0;
+    
+}
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Moda & Magia</title>
+    <title>Moda & Magia | Home</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -66,31 +81,38 @@
   </div> 
 
 
-<nav class="navbar navbar-fixed-top navigation" >
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="index.html">
-        <h3>Moda & Magia</h3>
-      </a>
+  <nav class="navbar navbar-fixed-top navigation" >
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.php">
+          <h3>Moda & Magia</h3>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right menu">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="closet.php">Closet Virtual</a></li>
+          <li><a href="blog.php">Blog</a></li>
+          <li><a href="bazar.php">Bazar</a></li>
+          <li><a href="contact.php">Contato</a></li>
+          <li><a href="perfil.php" >Perfil</a></li>
+          <?php 
+            if($_SESSION["logado"] == true){
+              ?>
+              <li><a href="sair.php" >Sair</a></li>
+              <?php
+          }
+          ?>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="closet.html">Closet Virtual</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="bazar.html">Bazar</a></li>
-        <li><a href="contact.html">Contato</a></li>
-        <li><a href="perfil.php" >Perfil</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
 
   <header class="hero-area th-fullpage" data-parallax="scroll" data-image-src="images/slider/bg-2.jpeg">
@@ -127,7 +149,7 @@
                 eliminando 99,9% das chances de você não estar preparada para qualquer tipo de evento!
               </p>
               <!-- Entrar No Closet -->
-              <a class="btn btn-default btn-main" href="closet.html" role="button">Acesse nosso Closet!</a>
+              <a class="btn btn-default btn-main" href="closet.php" role="button">Acesse nosso Closet!</a>
             </div>
           </div>
           <div class="col-md-6">
