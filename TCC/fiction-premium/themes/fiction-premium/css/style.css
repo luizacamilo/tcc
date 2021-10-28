@@ -1920,8 +1920,13 @@ hr.hr-border {
   border-bottom: 2px solid #99FFDD;
 }
 
+.list-group-item{
+  background-color: #111111 !important;
+  border: none;
+}
+
 .blog-sidbar .list-group-item {
-  background: #111111;
+  background: #111111 !important;
   border: 0;
   border-bottom: 1px solid #292929;
   color: #fff;

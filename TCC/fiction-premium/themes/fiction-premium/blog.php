@@ -140,8 +140,8 @@ else{
                 </div>
                 <p class="blog-decisions">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonum euismod tincidunt ut laoreet dolore magna autem vel eum iriure dolor in.</p>
                 <a class="btn btn-default th-btn solid-btn" href="blog-single.html" role="button">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
               </div>
-            </div>
             </div>  
             <div class="blog-list-section blog-content-left row">
               <div class="col-md-9 blog-content-area">

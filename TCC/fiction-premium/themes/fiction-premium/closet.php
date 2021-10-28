@@ -146,19 +146,19 @@ else if($_SESSION["logado"] == true){
     </div>
   </section>
 
-  
+  <!--
   <section></section>
 
   <section class="portfolio">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12">-->
         <!--<div class="protfolio-mixitup-btn text-center">
           <button class="filter btn btn-default btn-main active" data-filter="all">Todas as Roupas</button>
           <button class="filter btn btn-default btn-main" data-filter="category-1">Femininas</button>
           <button class="filter btn btn-default btn-main" data-filter="category-2">Masculinas</button>
           <button class="filter btn btn-default btn-main" data-filter="category-3">Crianças</button>
-        </div>-->
+        </div>--><!--
         <div id="Container" class="filtr-container row">
           <div class="filtr-item col-md-4 col-sm-6 col-xs-12" data-category="category-1">
             <div class="portfolio-list">
@@ -166,10 +166,10 @@ else if($_SESSION["logado"] == true){
                 <div class="th-mouse-portfolio-card">
                   <div class="thumbnail portfolio-thumbnail clothing-thumbnail">
                     <img src="images/bazar/bazar_vestido_praia.jpg" alt="Portfolio">
-                    <!--<div class="caption portfolio-caption">
+                      <div class="caption portfolio-caption">
                       <h3 class="portfolio-title">Vestido de Praia</h3>
                       <p class="portfolio-subtitle">R$ 45,00</p>
-                    </div>-->
+                    </div>
                   </div>
                 </div>
               </a>
@@ -300,7 +300,7 @@ else if($_SESSION["logado"] == true){
 
 
   </div>
-</section>
+</section>-->
 
 
 
