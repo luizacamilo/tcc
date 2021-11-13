@@ -5,12 +5,15 @@ require_once "conexaobd.php";
 
 $id = $_SESSION["id"];
 
+//Informações
 $sqlPerfil = mysqli_query($conn,"SELECT * from tbusuario where id_user = '$id'");
 $rsPerfil = mysqli_fetch_array($sqlPerfil);
 
+//Seleção da Imagem
 $sqlImg = mysqli_query($conn,"SELECT TO_BASE64(img_user) from tbusuario where id_user = '$id'");
 $rsImg = mysqli_fetch_array($sqlImg)[0];
 
+//Medidas
 $sqlMedidas = mysqli_query($conn,"SELECT * from tbmedidas where  id_user = '$id'");
 $rsMedidas = mysqli_fetch_array($sqlMedidas);
 

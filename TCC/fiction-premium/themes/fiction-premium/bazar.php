@@ -1,6 +1,9 @@
 <?php
 
 session_start();
+require_once "conexaobd.php";
+
+$sqlBazar = mysqli_query($conn, "SELECT * FROM tbroupa WHERE bazar = 'S'");
 
 
 
@@ -142,96 +145,28 @@ else{
           <button class="filter btn btn-default btn-main" data-filter="category-3">Crianças</button>
         </div>
         <div id="Container" class="filtr-container row">
-          <div class="filtr-item col-md-4 col-sm-6 col-xs-12" data-category="category-1">
-            <div class="portfolio-list">
-              <a href="portfolio-single.html">
-                <div class="th-mouse-portfolio-card">
-                  <div class="thumbnail portfolio-thumbnail">
-                    <img src="images/bazar/bazar_vestido_praia.jpg" alt="Portfolio">
-                    <div class="caption portfolio-caption">
-                      <h3 class="portfolio-title">Vestido de Praia</h3>
-                      <p class="portfolio-subtitle">R$ 45,00</p>
+
+          <?php while ($rsBazar = mysqli_fetch_array($sqlBazar)){
+              //Seleção de Imagens
+              $sqlImg = mysqli_query($conn,"SELECT TO_BASE64(img_roupa) FROM tbroupa WHERE id_roupa = '".$rsBazar["id_roupa"]."'");
+              $rsImg = mysqli_fetch_array($sqlImg); 
+            ?>
+
+            <div class="filtr-item col-md-4 col-sm-6 col-xs-12" data-category="">
+              <div class="portfolio-list">
+                <a href="">
+                  <div class="th-mouse-portfolio-card">
+                    <div class="thumbnail portfolio-thumbnail">
+                      <img src="data:image/jpg;base64,<?php echo $rsImg["TO_BASE64(img_roupa)"] ?>" alt="Portfolio">
+                      <div class="caption portfolio-caption">
+                        <h3 class="portfolio-title"><?php echo $rsBazar["nome_roupa"] ?></h3>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="filtr-item col-md-4 col-sm-6 col-xs-12" data-category="category-2">
-            <div class="portfolio-list">
-              <a href="portfolio-single.html">
-                <div class="th-mouse-portfolio-card">
-                  <div class="thumbnail portfolio-thumbnail">
-                    <img src="images/bazar/bazar_calca_jeans.jpg" alt="Portfolio">
-                    <div class="caption portfolio-caption">
-                      <h3 class="portfolio-title">Calça Jeans Preta</h3>
-                      <p class="portfolio-subtitle">R$ 23,00</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="filtr-item col-md-4 col-sm-6 col-xs-12" data-category="category-3">
-            <div class="portfolio-list">
-              <a href="portfolio-single.html">
-                <div class="th-mouse-portfolio-card">
-                  <div class="thumbnail portfolio-thumbnail">
-                    <img src="images/bazar/bazar_sand_hello_kitty.jpg" alt="Portfolio">
-                    <div class="caption portfolio-caption">
-                      <h3 class="portfolio-title">Sandalia Hello Kitty</h3>
-                      <p class="portfolio-subtitle">R$ 40,00</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="filtr-item col-md-4 col-sm-6 col-xs-12" data-category="category-1">
-            <div class="portfolio-list">
-              <a href="portfolio-single.html">
-                <div class="th-mouse-portfolio-card">
-                  <div class="thumbnail portfolio-thumbnail">
-                    <img src="images/bazar/bazar_vestido_azul.jpg" alt="Portfolio">
-                    <div class="caption portfolio-caption">
-                      <h3 class="portfolio-title">Vestido de Noite Azul</h3>
-                      <p class="portfolio-subtitle">R$ 50,00</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="filtr-item col-md-4 col-sm-6 col-xs-12" data-category="category-2">
-            <div class="portfolio-list">
-              <a href="portfolio-single.html">
-                <div class="th-mouse-portfolio-card">
-                  <div class="thumbnail portfolio-thumbnail">
-                    <img src="images/bazar/bazar_camiseta_azul.jpg" alt="Portfolio">
-                    <div class="caption portfolio-caption">
-                      <h3 class="portfolio-title">Camiseta Masculina Azul</h3>
-                      <p class="portfolio-subtitle">R$ 25,00</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="filtr-item col-md-4 col-sm-6 col-xs-12" data-category="category-3">
-            <div class="portfolio-list">
-              <a href="portfolio-single.html">
-                <div class="th-mouse-portfolio-card">
-                  <div class="thumbnail portfolio-thumbnail">
-                    <img src="images/bazar/bazar_vestido_crianca.jpg" alt="Portfolio">
-                    <div class="caption portfolio-caption">
-                      <h3 class="portfolio-title">Vestido Rosa Pink</h3>
-                      <p class="portfolio-subtitle">R$ 38,00</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
+          <?php } ?>
         </div>
       </div>
     </div>
