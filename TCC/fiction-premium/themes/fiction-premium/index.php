@@ -181,7 +181,7 @@ else{
                 Diariamente, novos posts são criados para ajudar você a se antenar ao mundo da moda! Qual as cores da nova estação, o que vestir para um casamento, e até mesmo dicas de costura. O que está esperando para participar?
               </p>
               <!-- View More Details -->
-              <a class="btn btn-default btn-main" href="#" role="button">Entrar no Blog</a>
+              <a class="btn btn-default btn-main" href="blog.php" role="button">Entrar no Blog</a>
             </div>
           </div>
         </div>

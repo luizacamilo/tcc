@@ -54,7 +54,8 @@ else{
       <div class="containera">
         <div class="simple-login-container">
             <h2>Cadastre-se!</h2>
-            <form method="post" action="gravaCadastro.php"  enctype="multipart/form-data">
+						</br>
+            <form method="post" action="gravaCadastro.php?opcao=1"  enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-12 form-group">
                         <input type="text" name="nome_user" class="form-control" placeholder="Nome">
@@ -86,6 +87,11 @@ else{
                         <label class="radio">
                             <input name="genero_user" value="M" type="radio" >
                             Masculino
+                        </label>   
+                        <br>
+                        <label class="radio">
+                            <input name="genero_user" value="N" type="radio" >
+                            Outro
                         </label>            
                     </div>
                 </div>
@@ -105,7 +111,7 @@ else{
                 <br>
                 <div class="row">
                     <div class="col-md-12 form-group">
-                        <span class="label">Já possui conta? <a href="login.php" style="color: #00a76f;">Entrar</a></span>
+                        <span class="label">Já possui conta? <a href="login.php" style="color: #99ffdd;">Entrar</a></span>
                     </div>
                 </div>
                 <div class="row">

@@ -5,12 +5,15 @@ require_once "conexaobd.php";
 
 $id = $_SESSION["id"];
 
+//Informações
 $sqlPerfil = mysqli_query($conn,"SELECT * from tbusuario where id_user = '$id'");
 $rsPerfil = mysqli_fetch_array($sqlPerfil);
 
+//Seleção da Imagem
 $sqlImg = mysqli_query($conn,"SELECT TO_BASE64(img_user) from tbusuario where id_user = '$id'");
 $rsImg = mysqli_fetch_array($sqlImg)[0];
 
+//Medidas
 $sqlMedidas = mysqli_query($conn,"SELECT * from tbmedidas where  id_user = '$id'");
 $rsMedidas = mysqli_fetch_array($sqlMedidas);
 
@@ -153,7 +156,7 @@ else if($_SESSION["logado"] == true){
             <div class="blog-content-description">
               <h3 class="blog-inner-heading">Suas Informações</h4>
               <div class="blog-content-description">
-                <a class="blog-hiperlink" href="alteracaoCadastro.php">Alterar Informações</a>
+                <a class="blog-hiperlink" href="alteracaoPerfil.php">Alterar Informações</a>
               </div>
               <div class="blog-img perfil-img">
                 <img src="data:image/jpg;base64, <?php echo $rsImg ?>" />
@@ -175,6 +178,9 @@ else if($_SESSION["logado"] == true){
                   } 
                   elseif ($rsPerfil["genero_user"]=="M"){
                     echo "Masculino";
+                  }
+                  elseif ($rsPerfil["genero_user"]=="N"){
+                    echo "Não Especificado";
                   }
                   ?>
                 </p>
@@ -208,9 +214,6 @@ else if($_SESSION["logado"] == true){
               }
               else{
               ?>
-              <!--
-                altura	largura_ombros	busto	cintura	quadril	pe	comprimento_bracos	altura_pernas
-              -->
                 <div class="blog-content-description">
                   <a class="blog-hiperlink" href="alteracaoMedidas.php">Alterar medidas</a>
                 </div>

@@ -112,7 +112,7 @@ else if($_SESSION["logado"] == true){
           <div class="blog-content-description">
             <h3 class="blog-inner-heading">Adicione suas medidas!</h4>
             <p class="blog-description">Lembre-se de colocar todas as medidas em cm (centímetros)!</p>
-            <form class="measuring-form" method="post" action="gravaMedida.php">
+            <form class="measuring-form" method="post" action="gravaMedida.php?opcao=1">
               <!--
                 altura	largura_ombros	busto	cintura	quadril	pe	comprimento_bracos	altura_pernas
               -->
@@ -158,11 +158,6 @@ else if($_SESSION["logado"] == true){
                 </div>
                 <div class="col-md-12 form-group">
                   <input type="submit" class="btn-main" value="Salvar">
-                </div>
-                <div class="col-md-6 margin-0">
-                  <div class="form-group">
-                      <img src="images/bazar/bazar_camiseta_azul.jpg" class="img-form">
-                  </div>
                 </div>
               </div>
             </form>

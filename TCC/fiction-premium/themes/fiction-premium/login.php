@@ -53,6 +53,7 @@ else{
         <div class="containera">
             <div class="simple-login-container">
                 <h2>Entre em sua Conta!</h2>
+    						</br>
                 <form method="post" action="validalogin.php">
                     <div class="row">
                         <div class="col-md-12 form-group">
@@ -67,7 +68,7 @@ else{
                     <br>
                     <div class="row">
                         <div class="col-md-12 form-group">
-                            <span class="label">Ainda não tem uma conta? <a href="cadastro.php" style="color: #00a76f;">Cadastre-se</a></span>
+                            <span class="label">Ainda não tem uma conta? <a href="cadastro.php" style="color: #99FFDD;">Cadastre-se</a></span>
                         </div>
                     </div>
                     <div class="row">
