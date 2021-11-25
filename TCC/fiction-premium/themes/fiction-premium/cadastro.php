@@ -9,7 +9,7 @@ $erro = $_SESSION["erro"];
 <!doctype html>
 <html class="no-js" lang="zxx">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"> 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Moda & Magia</title>
     <meta name="description" content="">
@@ -47,6 +47,8 @@ $erro = $_SESSION["erro"];
         <h2>Cadastre-se!</h2>
 				<?php if($erro==3){?>
 					<p class="error">Erro no banco de dados. Tente novamente mais tarde.</p>
+				<?php } elseif($erro==2){?>
+					<p class="error">Preencha todos os campos, e não esqueça da foto!</p>
 				<?php } ?>
 				</br>
         <form method="post" action="gravaCadastro.php?opcao=1"  enctype="multipart/form-data">

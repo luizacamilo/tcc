@@ -16,7 +16,7 @@ switch ($op){
   case "1":
     $senhaUser = $_POST["senha_user"];
 		$fotoUser = addslashes(file_get_contents($_FILES['img_user']['tmp_name']));
-    if($nomeUser && $emailUser && $datanasci_user && $genUser && $senhaUser && $fotoUser){
+    if($nomeUser && $emailUser && $datanasciUser && $genUser && $senhaUser){
       $sqlCadastro = mysqli_query($conn,"INSERT INTO tbusuario (nome_user, email_user, senha_user, genero_user, datanasci_user, img_user) 
       VALUES ('".$nomeUser."','".$emailUser."','".$senhaUser."','".$genUser."','".$datanasciUser."','".$fotoUser."')");
 

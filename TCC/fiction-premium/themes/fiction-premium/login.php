@@ -2,16 +2,7 @@
 
 session_start();
 
-
-
-if(isset($_SESSION["erro"])){
-    $erro = $_SESSION["erro"];
-
-}
-else{
-    $erro = 0;
-    
-}
+$erro = $_SESSION["erro"];
 
 
 ?>
