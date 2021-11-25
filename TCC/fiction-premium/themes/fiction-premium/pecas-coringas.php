@@ -18,7 +18,7 @@ else{
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Moda & Magia | Blog</title>
+    <title>Moda & Magia | Peças Coringas</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -80,7 +80,7 @@ else{
           <span class="icon-bar"></span>
         </button>
         <a href="index.php">
-          <h3>Moda & Magia | Peças Coringas</h3>
+          <h3>Moda & Magia</h3>
         </a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
