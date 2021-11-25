@@ -32,7 +32,7 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
       $body .= "Email: ".$userEmail. "\r\n";
       $body .= "Mensagem: ".$mensagem. "\r\n";
       
-      mail($to, $assunto, $body);
+      mail($to, $assunto, $body, $userEmail);
 
       $mensagem_enviada = true;
 
@@ -169,12 +169,41 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
  <section class="contact-form">
 
   <?php
-    if($mensagem_enviada):
-  ?>
-
-
-  <?php
-    else:
+    if($mensagem_enviada){ ?>
+      <div class="container">
+      <div class="row">
+        <div class="title text-center">
+          <h2>Contato</h2>
+        </div>
+        <p class="message-sent">Mensagem Enviada com Sucesso!</p>
+        <form class="form" method="post" action="contact.php">
+            <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" name="nome" class="form-control" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control" placeholder="E-mail">
+                </div>
+                  <div class="form-group margin-0">
+                    <input type="text" name="assunto" class="form-control" placeholder="Assunto">
+                  </div>
+                </div>
+                <div class="col-md-6 margin-0">
+                  <div class="form-group">
+                    <textarea class="form-control" name="msg" rows="3" placeholder="Mensagem"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="contact-btn text-center">
+                    <input class="btn btn-default btn-main" type="submit" value="Enviar Mensagem">
+                  </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+    <?php }
+    else{
   ?>
     <div class="container">
       <div class="row">
@@ -209,7 +238,7 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
     </div>
   
   <?php
-    endif;
+    }
   ?>
   
 

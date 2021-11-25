@@ -42,19 +42,13 @@ else{
     <link rel="icon" href="images/icones/icone_mm_black_recortado.png" />
 
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
       #map_canvas {
         height: 100%;
       }
-      /* Optional: Makes the sample page fill the window. */
     </style>
     <script src="plugins/modernizr.min.js"></script>
   </head>
   <body>
-    <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
   <!-- Loader to display before content Load-->
   <div class="loading">
@@ -140,13 +134,11 @@ else{
             <div class="content">
               <h4 class="inner-title">Closet Virtual</h4>
               <p class="case-description">Tem dificuldades na hora de decidir os looks para utilizar na 
-                festa de aniversário de 7 anos do primo do seu namorado? Ou apenas tem receio de
-                que pode estar utilizando 10% de todas as peças que voce tem dentro do seu armário? 
+                festa de aniversário de 7 anos do primo do seu namorado? Ou tem receio de
+                que pode estar utilizando apenas 10% de todas as peças que você tem dentro do seu armário? 
               </p>
               <p>
-                O nosso Closet Virtual foi criado pensando justamente na pessoa que deseja ser organizada, porém precisa de uma ferramenta de auxílio para isso. 
-                Com nossas tecnologias de ponta, conseguimos decidir um look por você de acordo com a ocasião, economizando, assim, tempo, esforço mental e 
-                eliminando 99,9% das chances de você não estar preparada para qualquer tipo de evento!
+                O nosso Closet Virtual foi criado pensando justamente na pessoa que deseja ser organizada, porém precisa de uma ferramenta de auxílio para isso.
               </p>
               <!-- Entrar No Closet -->
               <a class="btn btn-default btn-main" href="closet.php" role="button">Acesse nosso Closet!</a>
@@ -176,7 +168,7 @@ else{
             <!-- inner sub-title -->
             <div class="content">
               <h4 class="inner-title">Blog Fashionista</h4>
-              <p class="case-description">Acha que sabe tudo de moda e do mundo fashion? O que acha de compartilhar seus conhecimentos com todo o mundo? Que tal participar ativamente de nosso Blog?</p>
+              <p class="case-description">Acha que sabe tudo de moda e do mundo fashion? O que acha de testar seus conhecimentos com Blog?</p>
               <p>
                 Diariamente, novos posts são criados para ajudar você a se antenar ao mundo da moda! Qual as cores da nova estação, o que vestir para um casamento, e até mesmo dicas de costura. O que está esperando para participar?
               </p>
@@ -188,39 +180,6 @@ else{
       </div>
     </div>
   </section>
-  
-
-
-  <!-- <section class="clients-logo" data-parallax="scroll" data-image-src="images/slider/bg-2.jpeg">
-    <div class="section">
-      <div class="title text-center">
-        <h2>Bazar</h2>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 block text-center">
-            <img src="images/clients-logo/client-logo-1.png" alt="Client Logo">
-          </div>
-          <div class="col-md-4 block text-center">
-            <img src="images/clients-logo/client-logo-2.png" alt="Client Logo">
-          </div>
-          <div class="col-md-4 block text-center">
-            <img src="images/clients-logo/client-logo-3.png" alt="Client Logo">
-          </div>
-        
-          <div class="col-md-4 block text-center">
-            <img src="images/clients-logo/client-logo-4.png" alt="Client Logo">
-          </div>
-          <div class="col-md-4 block text-center">
-            <img src="images/clients-logo/client-logo-5.png" alt="Client Logo">
-          </div>
-          <div class="col-md-4 block text-center">
-            <img src="images/clients-logo/client-logo-6.png" alt="Client Logo">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>  -->
 
 
   <!-- Team Sections
@@ -240,15 +199,15 @@ else{
           <div class="overlay text-center">
             <div class="content">
               <h4>Bianca Renesto</h4>
-              <span>Aluna do 3 ano de desenvolvimento de sistemas</span>
-              <p>Ultimo ano do curso de desenvolvimento de sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
+              <span>Aluna do 3 ano de Desenvolvimento de Sistemas</span>
+              <p>Último ano do curso de Desenvolvimento de Sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
               
             </div>
             <div class="social-media">
-              <li><a href="#"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-linkedin-outline" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-instagram-outline" aria-hidden="true"></i></a></li>
+              <li><i class="tf-ion-social-facebook" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-twitter" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-linkedin-outline" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-instagram-outline" aria-hidden="true"></i></li>
             </div>
           </div>
         </div>
@@ -263,15 +222,15 @@ else{
           <div class="overlay text-center">
             <div class="content">
               <h4>Bianca Oliveira</h4>
-              <span>Aluna do 3 ano de desenvolvimento de sistemas</span>
-              <p>Ultimo ano do curso de desenvolvimento de sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
+              <span>Aluna do 3 ano de Desenvolvimento de Sistemas</span>
+              <p>Último ano do curso de Desenvolvimento de Sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
               
             </div>
             <div class="social-media">
-              <li><a href="#"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-linkedin-outline" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-instagram-outline" aria-hidden="true"></i></a></li>
+              <li><i class="tf-ion-social-facebook" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-twitter" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-linkedin-outline" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-instagram-outline" aria-hidden="true"></i></li>
             </div>
           </div>
         </div>
@@ -286,15 +245,15 @@ else{
           <div class="overlay text-center">
             <div class="content">
               <h4>Luiza Camilo</h4>
-              <span>Aluna do 3 ano de desenvolvimento de sistemas</span>
-              <p>Ultimo ano do curso de desenvolvimento de sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
+              <span>Aluna do 3 ano de Desenvolvimento de Sistemas</span>
+              <p>Último ano do curso de Desenvolvimento de Sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
               
             </div>
             <div class="social-media">
-              <li><a href="#"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-linkedin-outline" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-instagram-outline" aria-hidden="true"></i></a></li>
+              <li><i class="tf-ion-social-facebook" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-twitter" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-linkedin-outline" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-instagram-outline" aria-hidden="true"></i></li>
             </div>
           </div>
         </div>
@@ -309,15 +268,15 @@ else{
           <div class="overlay text-center">
             <div class="content">
               <h4>Pietra Dini</h4>
-              <span>Aluna do 3 ano de desenvolvimento de sistemas</span>
-              <p>Ultimo ano do curso de desenvolvimento de sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
+              <span>Aluna do 3 ano de Desenvolvimento de Sistemas</span>
+              <p>Último ano do curso de Desenvolvimento de Sistemas integrado ao ensino medio na ETEC de Guarulhos</p>
               
             </div>
             <div class="social-media">
-              <li><a href="#"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-linkedin-outline" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="tf-ion-social-instagram-outline" aria-hidden="true"></i></a></li>
+              <li><i class="tf-ion-social-facebook" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-twitter" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-linkedin-outline" aria-hidden="true"></i></li>
+              <li><i class="tf-ion-social-instagram-outline" aria-hidden="true"></i></li>
             </div>
           </div>
         </div>

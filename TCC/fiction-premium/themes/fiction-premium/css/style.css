@@ -665,6 +665,13 @@ div.loading {
   color: #99FFDD;
 }
 
+.message-sent{
+  text-align: center;
+  color: #99FFDD;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 /* Footer Media Link */
 .footer-media-link li {
   display: inline-block;

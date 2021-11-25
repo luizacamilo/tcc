@@ -18,7 +18,7 @@ else{
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Moda & Magia | Blog</title>
+    <title>Moda & Magia | Dicas para Looks</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -70,17 +70,6 @@ else{
     </div>
   </div> 
 
-
-  <header class="hero-area th-fullpage" data-parallax="scroll" data-image-src="images/slider/bg-blog.jpeg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1></h1>
-        </div>
-      </div>
-    </div>
-  </header>
-
   <nav class="navbar navbar-fixed-top navigation" >
     <div class="container">
       <div class="navbar-header">
@@ -113,89 +102,76 @@ else{
       </div>
     </div>
   </nav>
-
   
-
-  <section class="blog">
-    <div class="container">
-      <div class="row">
-        <div class="title text-center">
-          <h2>Postagens Recentes</h2>
-        </div>
-        <div class="col-md-9">
-          <div class="blog-list-section blog-content-right row">
-            <div class="col-md-9 blog-content-area">
-              <div class="blog-img">
-                <img class="img-responsive" src="images/blog/tipos-de-corpo.jpg" alt="">      
-              </div>
-              <div class="blog-content">
-                <a href="dicas-para-montar-looks.php"><h4 class="blog-title">Como montar um look que realce seu corpo e autoestima?</h4></a>
+  <!-- Blog Sections 
+  =========================-->
+  <section class="blog-single">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-9">
+				  <!-- Blog Left Sections 
+				  =========================-->
+            <!-- Single Blog Page Main Img
+            ============================== -->
+            <div class="blog-single-section-img">
+              <img src="images/blog/tipos-de-corpo.jpg" alt="Blog Single Img">
+            </div>
+            <!-- Single Blog Page Main Content
+            ================================== -->
+            <div class="blog-single-content">
+              <div class="blog-content-description">
+                <h3 class="blog-content-title">Como montar um look que realce seu corpo e autoestima?</h3>
                 <div class="meta">
                   <div class="date">
-                    <p>25 de novembro de 2021</p>
+                    <p>25 Nov 2021</p>
                   </div>
                   <div class="author">
-                    <p>por Pietra Dini</p>
+                    <p>Por Pietra Dini</p>
                   </div>
                 </div>
-                <p class="blog-decisions">Quer saber como realçar seu corpo usando suas roupas favoritas? Este artigo te ajudará a descobrir!</p>
-                </div>
+                <p class="blog-description">
+                  Não é nada fácil se sentir bem numa roupa, principalmente quando estamos com a autoestima baixa. São milhares de roupas e milhares de combinações
+                  que podem ser usadas, e muitas vezes acabamos nem saindo de casa por estes mesmos motivos. Porém, não se preocupe, pois com este artigo você aprenderá duas maneiras
+                  de realçar seu corpo e montar looks em que você se sinta confortável!
+                </p>
               </div>
-            </div>  
-            <div class="blog-list-section blog-content-left row">
-              <div class="col-md-9 blog-content-area">
-                <div class="blog-img">
-                  <img class="img-responsive" src="images/blog/blog-img1.jpeg" alt="">      
-                </div>
-                <div class="blog-content">
-                  <a href="a-roda-de-cores.php"><h4 class="blog-title">A Roda de Cores: Como combinar peças coloridas</h4></a>
-                  <div class="meta">
-                    <div class="date">
-                      <p>24 Nov 2021</p>
-                    </div>
-                    <div class="author">
-                      <p>Por Pietra Dini</p>
-                    </div>
-                  </div>
-                  <p class="blog-description">Entender a roda de cores pode te ajudar a formar looks que conversam entre si e possuem grande harmonia.</p>
-                </div>
+              <div class="blog-content-description">
+                <h4 class="blog-inner-heading">Conheça seu Corpo</h4>
+                <p class="blog-description">
+                Antes de pensar nas peças de roupa é preciso entender seu formato de corpo. Cada mulher tem um biotipo diferente, ninguém é igual, por isso é preciso
+                 entender seu corpo para escolher peças que o valorizem. As roupas não são para corrigir, mas sim para ressaltar o que você tem de melhor.  Entender o 
+                 seu corpo faz com que você reconheça peças, acessórios e calçados que mais te valorizam. Dessa forma é mais fácil criar combinações que te agradem e 
+                 fiquem mais proporcionais visualmente. Saiba se você tem mais ou menos busto, se o seu quadril é menor ou mais encorpado e se suas coxas são mais 
+                 finas ou mais grossas. Dessa forma, é possível encontrar peças com modelagens confortáveis e que realçam cada parte. 
+                </p>
               </div>
-            </div>  
-            
-            <div class="blog-list-section row">
-              <div class="col-md-9 blog-content-area">
-                <div class="video-section">
-                  <img class="img-responsive" src="images/blog/pecas.jpg" alt="">
-                  <div class="video-overlay">
-                    <a id="th-video" class="th-video" href="blog-single.html"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
-                  </div>
-                </div>
-                <div class="blog-content">
-                  <a href="pecas-coringas.php"><h4 class="blog-title">Peças Coringas</h4></a>
-                  <div class="meta">
-                    <div class="date">
-                      <p>24 Nov 2021</p>
-                    </div>
-                    <div class="author">
-                      <p>Por Pietra Dini</p>
-                    </div>
-                  </div>
-                  <p class="blog-decisions">Está atrasado e não sabe o que usar? Ou foi viajar e precisa de mais roupas do que pensava? Não se preocupe porque </p>
-                </div>
+              <div class="blog-content-description">
+                <h4 class="blog-inner-heading">Encontre seu Estilo e Transmita sua Personalidade</h4>
+                <p class="blog-description">
+                  Ao escolher as peças de rouaa, é necessário slecionar aqueles que combinam com o seu estilo e personalidade, além de ser peças de roupa que te façam sentir
+                  confortável. Por isso, é importante entender quais roupastem a sua cara e você entende que vai gostar.
+                  </br></br>
+                  Entender seu estilo ajuda a escolher qual tendência usar e também como adaptar para o seu dia-a-dia.
+                  </br></br>
+                  Adeque as peças ao seu cotidiano e estilo para ter combinações que conversem com você. Além disso, não tenha medo de experimentar novas coisas,
+                  tente novas peça, modelagens e cores para entender como pode funcionar para você. Use sua criatividade!
+                </p>
               </div>
-            </div>
-
+            </div><!-- End Single Blog Content -->
+          <!-- See All Post -->
           <div class="col-md-12">
             <div class="see-all-post text-center">
-              <p style="font-weight: bold;">Fim da página <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+              <a class="btn btn-default th-btn solid-btn" href="blog.php" role="button"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Voltar ao Blog </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+  			</div>
+  		</div>
+  	</div>
   </section>
+  
 
-<footer class="footer">
+    
+ <footer class="footer">
   <div class="container">
       <div class="row">
           <div class="text-center">
@@ -213,12 +189,20 @@ else{
     <script src="plugins/jquery.min.js"></script>
 
     <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
     <script src="plugins/slick/slick.min.js"></script>
+    <!-- filter -->
     <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+    <!-- Lightbox -->
     <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Parallax -->
     <script src="plugins/parallax.min.js"></script>
+    <!-- Video -->
     <script src="plugins/jquery.vide.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
     <script src="plugins/google-map/gmap.js"></script>
+
     <script src="js/script.js"></script>
     </body>
 

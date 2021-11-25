@@ -70,17 +70,6 @@ else{
     </div>
   </div> 
 
-
-  <header class="hero-area th-fullpage" data-parallax="scroll" data-image-src="images/slider/bg-blog.jpeg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1></h1>
-        </div>
-      </div>
-    </div>
-  </header>
-
   <nav class="navbar navbar-fixed-top navigation" >
     <div class="container">
       <div class="navbar-header">
@@ -91,7 +80,7 @@ else{
           <span class="icon-bar"></span>
         </button>
         <a href="index.php">
-          <h3>Moda & Magia</h3>
+          <h3>Moda & Magia | Peças Coringas</h3>
         </a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -113,89 +102,71 @@ else{
       </div>
     </div>
   </nav>
-
   
-
-  <section class="blog">
-    <div class="container">
-      <div class="row">
-        <div class="title text-center">
-          <h2>Postagens Recentes</h2>
-        </div>
-        <div class="col-md-9">
-          <div class="blog-list-section blog-content-right row">
-            <div class="col-md-9 blog-content-area">
-              <div class="blog-img">
-                <img class="img-responsive" src="images/blog/tipos-de-corpo.jpg" alt="">      
-              </div>
-              <div class="blog-content">
-                <a href="dicas-para-montar-looks.php"><h4 class="blog-title">Como montar um look que realce seu corpo e autoestima?</h4></a>
+  <!-- Blog Sections 
+  =========================-->
+  <section class="blog-single">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-9">
+				  <!-- Blog Left Sections 
+				  =========================-->
+            <!-- Single Blog Page Main Img
+            ============================== -->
+            <div class="blog-single-section-img">
+              <img src="images/blog/pecas.jpg" alt="Blog Single Img">
+            </div>
+            <!-- Single Blog Page Main Content
+            ================================== -->
+            <div class="blog-single-content">
+              <div class="blog-content-description">
+                <h3 class="blog-content-title">Peças Coringas</h3>
                 <div class="meta">
                   <div class="date">
-                    <p>25 de novembro de 2021</p>
+                    <p>25 Nov 2021</p>
                   </div>
                   <div class="author">
-                    <p>por Pietra Dini</p>
+                    <p>Por Pietra Dini</p>
                   </div>
                 </div>
-                <p class="blog-decisions">Quer saber como realçar seu corpo usando suas roupas favoritas? Este artigo te ajudará a descobrir!</p>
-                </div>
+                <p class="blog-description">
+                  É fato que todos temos uma peça de roupa favorita. Uma sandália com glitter, um vestido de tule, uma camiseta cinza simples. Porém, nem 
+                  sempre conseguimos usá-la do jeito que queremos, pois não conseguimos descobrir maneiras de estiliza-la com o resto da roupa. Contudo,
+                   neste artigo vamos mostrar maneiras de criar looks diferentes, mas com a mesma peça.
+                </p>
               </div>
-            </div>  
-            <div class="blog-list-section blog-content-left row">
-              <div class="col-md-9 blog-content-area">
-                <div class="blog-img">
-                  <img class="img-responsive" src="images/blog/blog-img1.jpeg" alt="">      
-                </div>
-                <div class="blog-content">
-                  <a href="a-roda-de-cores.php"><h4 class="blog-title">A Roda de Cores: Como combinar peças coloridas</h4></a>
-                  <div class="meta">
-                    <div class="date">
-                      <p>24 Nov 2021</p>
-                    </div>
-                    <div class="author">
-                      <p>Por Pietra Dini</p>
-                    </div>
-                  </div>
-                  <p class="blog-description">Entender a roda de cores pode te ajudar a formar looks que conversam entre si e possuem grande harmonia.</p>
-                </div>
+              <div class="blog-content-description">
+                <h4 class="blog-inner-heading">Invista em Peças Coringas</h4>
+                <p class="blog-description">
+                  As peças coringas básicas são essenciais no guarda roupa de todo mundo. São ótimas para criar bases para qualquer tipo de look, além de 
+                  serem atemporais e não tão marcantes, podendo ser usadas por muito tempo sem saturar. A partir de uma blusinha preta, por exemplo, é 
+                  possível criar uma infinidade de combinações, alterando outras peças e acessórios diferentes para criar diferentes composições.
+                </p>
               </div>
-            </div>  
-            
-            <div class="blog-list-section row">
-              <div class="col-md-9 blog-content-area">
-                <div class="video-section">
-                  <img class="img-responsive" src="images/blog/pecas.jpg" alt="">
-                  <div class="video-overlay">
-                    <a id="th-video" class="th-video" href="blog-single.html"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
-                  </div>
-                </div>
-                <div class="blog-content">
-                  <a href="pecas-coringas.php"><h4 class="blog-title">Peças Coringas</h4></a>
-                  <div class="meta">
-                    <div class="date">
-                      <p>24 Nov 2021</p>
-                    </div>
-                    <div class="author">
-                      <p>Por Pietra Dini</p>
-                    </div>
-                  </div>
-                  <p class="blog-decisions">Está atrasado e não sabe o que usar? Ou foi viajar e precisa de mais roupas do que pensava? Não se preocupe porque </p>
-                </div>
+              <div class="blog-content-description">
+                <h4 class="blog-inner-heading">Aposte nos Acessórios</h4>
+                <p class="blog-description">
+                  Para compor os looks, aposte em acessórios. Os acessórios são capazes de transformar peças básicas  e dar um destaque para as composições.
+                  Por isso, use bolsas, colares, brincos, pulseiras e chapéus. Aproveite e brinque com o tamanho dos acessórios; para composições mais 
+                  discretas, escolha objetos menores e mais delicados. Nos momentos em que você deseja que o acessório seja um dos assuntos principais 
+                  do look, escolha maxi colar e brincos grandes.
+                </p>
               </div>
-            </div>
-
+            </div><!-- End Single Blog Content -->
+          <!-- See All Post -->
           <div class="col-md-12">
             <div class="see-all-post text-center">
-              <p style="font-weight: bold;">Fim da página <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
+              <a class="btn btn-default th-btn solid-btn" href="blog.php" role="button"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Voltar ao Blog </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+  			</div>
+  		</div>
+  	</div>
   </section>
+  
 
-<footer class="footer">
+    
+ <footer class="footer">
   <div class="container">
       <div class="row">
           <div class="text-center">
@@ -213,12 +184,20 @@ else{
     <script src="plugins/jquery.min.js"></script>
 
     <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
     <script src="plugins/slick/slick.min.js"></script>
+    <!-- filter -->
     <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+    <!-- Lightbox -->
     <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Parallax -->
     <script src="plugins/parallax.min.js"></script>
+    <!-- Video -->
     <script src="plugins/jquery.vide.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
     <script src="plugins/google-map/gmap.js"></script>
+
     <script src="js/script.js"></script>
     </body>
 
