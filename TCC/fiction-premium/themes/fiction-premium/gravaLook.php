@@ -37,12 +37,14 @@ switch($op){
     $agenda = $_GET["idagenda"];
     $sqlUpdLook = mysqli_query($conn,"UPDATE tbagendamento SET data_agenda='".$data."', evento_agenda='".$evento."' WHERE id_agenda='".$agenda."'");
     foreach ($roupa as $idRoupa){
+      
       $sqlLookExists = mysqli_query($conn, "SELECT * from roupa_agenda WHERE id_roupa='".$idRoupa."' and id_agenda='".$agenda."'");
       $rsLookExists = mysqli_fetch_array($sqlLookExists);
       if (is_null($rsLookExists)){
         $sqlAddRoupa = mysqli_query($conn, "INSERT INTO roupa_agenda(id_agenda, id_roupa) VALUES ('".$agenda."', '".$idRoupa."')");
         $rsAddRoupa = mysqli_affected_rows($conn);
       }
+      
     }
 
     header("location: agendaLooks.php");

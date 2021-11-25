@@ -27,13 +27,18 @@ switch ($op){
     $sqlIdRoupa = mysqli_query($conn, "SELECT id_roupa FROM tbroupa WHERE nome_roupa = '".$nome."' and id_user = '".$id."'");
     $rsIdRoupa = mysqli_fetch_array($sqlIdRoupa);
 
-    foreach ($tag as $idTag){
-      $sqlTagRoupa = mysqli_query($conn, "INSERT INTO roupa_tag(id_tag, id_roupa) VALUES ('".$idTag."', '".$rsIdRoupa["id_roupa"]."')");
-      $rsTagRoupa = mysqli_affected_rows($conn);
-      
-    }
-    if ($rsTagRoupa != 0){
+    if(is_null($tag)){
       header("location: closet.php");
+    }
+    else{
+      foreach ($tag as $idTag){
+        $sqlTagRoupa = mysqli_query($conn, "INSERT INTO roupa_tag(id_tag, id_roupa) VALUES ('".$idTag."', '".$rsIdRoupa["id_roupa"]."')");
+        $rsTagRoupa = mysqli_affected_rows($conn);
+        
+      }
+      if ($rsTagRoupa != 0){
+        header("location: closet.php");
+      }
     }
   break;
 

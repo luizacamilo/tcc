@@ -11,8 +11,8 @@ $rsLook = mysqli_fetch_array($sqlLook);
 //Roupas
 $sqlRoupa = mysqli_query($conn,"SELECT * FROM tbroupa where id_user ='".$id."' and bazar = 'N'");
 
-$sqlSelectRoupa = mysqli_query($conn,"SELECT * FROM roupa_agenda WHERE id_agenda = '".$agenda."'");
-$rsSelectRoupa = mysqli_fetch_array($sqlSelectRoupa);
+$sqlSelectRoupa = mysqli_query($conn,"SELECT id_roupa FROM roupa_agenda WHERE id_agenda = '".$agenda."'");
+
 
 
 if($_SESSION["logado"] == false){
@@ -146,12 +146,21 @@ else if($_SESSION["logado"] == true){
       <div class="select-roupas">
         <div class="display-closet">
           <?php 
+          $rsSelectRoupa = mysqli_fetch_all($sqlSelectRoupa);
+          $extraiId = function ($arr) {
+            //Retorna o primeiro elemento da array
+            return $arr[0];
+          };
+          //aplica a função em cada elemento
+          $roupaIds = array_map($extraiId, $rsSelectRoupa);
             while ($rsRoupa = mysqli_fetch_array($sqlRoupa)){
               //Seleção de Imagens
               $sqlImg = mysqli_query($conn,"SELECT TO_BASE64(img_roupa) FROM tbroupa WHERE id_roupa = '".$rsRoupa["id_roupa"]."'");
               $rsImg = mysqli_fetch_array($sqlImg); 
+
               
-              if($rsRoupa["id_roupa"]==$rsSelectRoupa["id_roupa"]){ ?>
+              
+              if(in_array($rsRoupa["id_roupa"], $roupaIds)){ ?>
             <div class="item-closet item-select">
               <input class="checkbox-look" type="checkbox" id="<?php echo $rsRoupa["id_roupa"] ?>" name="roupa[]" value="<?php echo $rsRoupa["id_roupa"] ?>" checked>
               <img src="data:image/jpg;base64,<?php echo $rsImg["TO_BASE64(img_roupa)"] ?>" class="roupa-img-look" for="<?php echo $rsRoupa["id_roupa"] ?>"/>

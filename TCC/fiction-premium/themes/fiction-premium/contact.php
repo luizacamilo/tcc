@@ -3,7 +3,6 @@
 session_start();
 
 
-
 if(isset($_SESSION["erro"])){
     $erro = $_SESSION["erro"];
 
@@ -12,6 +11,44 @@ else{
     $erro = 0;
     
 }
+
+
+$mensagem_enviada = false;
+if(isset($_POST['email']) && $_POST['email'] != ''){
+
+  if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
+
+      // SUBMETER O FORM
+      $userNome = $_POST['nome'];
+      $userEmail = $_POST['email'];
+      $assunto = $_POST['assunto'];
+      $mensagem = $_POST['mensagem'];
+      
+      
+      $to = "luizacamilobtu@gmail.com";
+      $body = "";
+      
+      $body .= "De: ".$userNome. "\r\n";
+      $body .= "Email: ".$userEmail. "\r\n";
+      $body .= "Mensagem: ".$mensagem. "\r\n";
+      
+      mail($to, $assunto, $body);
+
+      $mensagem_enviada = true;
+
+  }
+  else{
+    $classe_invalida = "form-invalid";
+  }
+
+
+}
+
+
+
+
+
+
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -128,24 +165,32 @@ else{
 
 
 
- <!-- Contact From Study Sections 
-  =========================-->
+ <!-- CONTACT FORM -->
  <section class="contact-form">
-   <div class="container">
-     <div class="row">
-       <div class="title text-center">
-         <h2>Contato</h2>
-       </div>
-       <form class="" method="post" action="mandaEmail.php">
+
+  <?php
+    if($mensagem_enviada):
+  ?>
+
+
+  <?php
+    else:
+  ?>
+    <div class="container">
+      <div class="row">
+        <div class="title text-center">
+          <h2>Contato</h2>
+        </div>
+        <form class="form" method="post" action="contact.php">
             <div class="col-md-6">
                 <div class="form-group">
-                  <input type="text" name="subject" class="form-control" placeholder="Assunto">
+                  <input type="text" name="nome" class="form-control" placeholder="Nome">
                 </div>
                 <div class="form-group">
                   <input type="email" name="email" class="form-control" placeholder="E-mail">
                 </div>
                   <div class="form-group margin-0">
-                    <input type="text" name="nome" class="form-control" placeholder="Nome">
+                    <input type="text" name="assunto" class="form-control" placeholder="Assunto">
                   </div>
                 </div>
                 <div class="col-md-6 margin-0">
@@ -159,9 +204,16 @@ else{
                   </div>
                 </div>
             </div>
-       </form>
-     </div>
-   </div>
+        </form>
+      </div>
+    </div>
+  
+  <?php
+    endif;
+  ?>
+  
+
+   
  </section>
 
  <footer class="footer">
