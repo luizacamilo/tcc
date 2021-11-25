@@ -17,46 +17,66 @@ $tag = $_POST["tag"];
 
 switch ($op){
   case "1":
-    $img = addslashes(file_get_contents($_FILES['img_roupa']['tmp_name']));;
+    $img = addslashes(file_get_contents($_FILES['img_roupa']['tmp_name']));
     $bazar = "N";
-    $sqlAddRoupa = mysqli_query($conn, "INSERT INTO tbroupa(img_roupa, nome_roupa, cor_roupa, tamanho_roupa, descricao_roupa, bazar, id_user, id_categ)
+
+    if($nome && $cor && $tamanho && $desc && $categ && $img && $bazar){
+      $sqlAddRoupa = mysqli_query($conn, "INSERT INTO tbroupa(img_roupa, nome_roupa, cor_roupa, tamanho_roupa, descricao_roupa, bazar, id_user, id_categ)
                             VALUES ('".$img."', '".$nome."', '".$cor."', '".$tamanho."', '".$desc."', '".$bazar."', '".$id."', '".$categ."')");
 
-    $rsAddRoupa = mysqli_affected_rows($conn);
+      $rsAddRoupa = mysqli_affected_rows($conn);
 
-    $sqlIdRoupa = mysqli_query($conn, "SELECT id_roupa FROM tbroupa WHERE nome_roupa = '".$nome."' and id_user = '".$id."'");
-    $rsIdRoupa = mysqli_fetch_array($sqlIdRoupa);
+      $sqlIdRoupa = mysqli_query($conn, "SELECT id_roupa FROM tbroupa WHERE nome_roupa = '".$nome."' and id_user = '".$id."'");
+      $rsIdRoupa = mysqli_fetch_array($sqlIdRoupa);
 
-    if(is_null($tag)){
-      header("location: closet.php");
+      if(is_null($tag)){
+        header("location: closet.php");
+        $_SESSION["erro"]=0;
+      }
+      else{
+        //adiciona a relação de tag e roupa
+        foreach ($tag as $idTag){
+          $sqlTagRoupa = mysqli_query($conn, "INSERT INTO roupa_tag(id_tag, id_roupa) VALUES ('".$idTag."', '".$rsIdRoupa["id_roupa"]."')");
+          $rsTagRoupa = mysqli_affected_rows($conn);
+          
+        }
+        if ($rsTagRoupa != 0){
+          header("location: closet.php");
+          $_SESSION["erro"]=0;
+        }
+      }
     }
     else{
-      foreach ($tag as $idTag){
-        $sqlTagRoupa = mysqli_query($conn, "INSERT INTO roupa_tag(id_tag, id_roupa) VALUES ('".$idTag."', '".$rsIdRoupa["id_roupa"]."')");
-        $rsTagRoupa = mysqli_affected_rows($conn);
-        
-      }
-      if ($rsTagRoupa != 0){
-        header("location: closet.php");
-      }
+      header("location: adicionarRoupa.php");
+      $_SESSION["erro"]=2;
     }
+    
   break;
 
   case "2":
     $idRoupa = $_GET["idroupa"];
-    $sqlUpdRoupa = mysqli_query($conn, "UPDATE tbroupa SET nome_roupa='".$nome."', cor_roupa='".$cor."', tamanho_roupa='".$tamanho."', 
-                              descricao_roupa='".$desc."', id_categ='".$categ."' WHERE id_roupa='".$idRoupa."'");
-    $rsUpdRoupa = mysqli_affected_rows($conn);
-    foreach ($tag as $idTag){
-      $sqlTagExists = mysqli_query($conn, "SELECT * from roupa_tag WHERE id_tag='".$idTag."' and id_roupa='".$idRoupa."'");
-      $rsTagExists = mysqli_fetch_array($sqlTagExists);
-      if (is_null($rsTagExists)){
-        $sqlTagRoupa = mysqli_query($conn, "INSERT INTO roupa_tag(id_tag, id_roupa) VALUES ('".$idTag."', '".$idRoupa."')");
-        $rsTagRoupa = mysqli_affected_rows($conn);
+    if($nome && $cor && $tamanho && $desc && $categ){
+      $sqlUpdRoupa = mysqli_query($conn, "UPDATE tbroupa SET nome_roupa='".$nome."', cor_roupa='".$cor."', tamanho_roupa='".$tamanho."', 
+                                descricao_roupa='".$desc."', id_categ='".$categ."' WHERE id_roupa='".$idRoupa."'");
+      $rsUpdRoupa = mysqli_affected_rows($conn);
+      foreach ($tag as $idTag){
+        //verifica se a relação já existe
+        $sqlTagExists = mysqli_query($conn, "SELECT * from roupa_tag WHERE id_tag='".$idTag."' and id_roupa='".$idRoupa."'");
+        $rsTagExists = mysqli_fetch_array($sqlTagExists);
+        //caso a relação não exista
+        if (is_null($rsTagExists)){
+          $sqlTagRoupa = mysqli_query($conn, "INSERT INTO roupa_tag(id_tag, id_roupa) VALUES ('".$idTag."', '".$idRoupa."')");
+          $rsTagRoupa = mysqli_affected_rows($conn);
+        }
+      }
+      if ($rsUpdRoupa = 1){
+        header("location: roupa.php?idroupa=".$idRoupa);
+        $_SESSION["erro"] = 0;
       }
     }
-    if ($rsUpdRoupa = 1){
-      header("location: roupa.php?idroupa=".$idRoupa);
+    else{
+      header("location: alteracaoRoupa.php?idroupa=".$idRoupa);
+      $_SESSION["erro"]=2;
     }
   break;
 

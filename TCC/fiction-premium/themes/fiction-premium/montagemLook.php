@@ -3,6 +3,7 @@ session_start();
 require_once "conexaobd.php";
 
 $id = $_SESSION["id"];
+$erro = $_SESSION["erro"];
 
 //Roupas
 $sqlRoupa = mysqli_query($conn,"SELECT * FROM tbroupa where id_user ='".$id."' and bazar = 'N'");
@@ -58,11 +59,8 @@ else if($_SESSION["logado"] == true){
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-<!-- Loader to display before content Load
+<!-- Loader to display before content Load-->
 <div class="loading">
-
- 
-
   <div class="windows8 loading-position">
     <div class="wBall" id="wBall_1">
       <div class="wInnerBall"></div>
@@ -80,7 +78,7 @@ else if($_SESSION["logado"] == true){
       <div class="wInnerBall"></div>
     </div>
   </div>
-</div> -->
+</div>
 
 
 <nav class="navbar navbar-fixed-top navigation" >
@@ -122,6 +120,13 @@ else if($_SESSION["logado"] == true){
       <div class="col-md-12 form-group">
         <input type="submit" class="btn btn-default btn-main" value="Salvar">
       </div>
+      <?php if($erro == 2){?>
+      <div>
+          <p class="error">Complete todos os campos e selecione algumas roupas!</p>
+      </div>
+      <?php  }elseif($erro == 3){ ?>
+        <p class="error">Erro no banco de dados. Tente novamente mais tarde.</p>
+      <?php } ?>
       <div class="info-looks-form">
         <div class="form-group">
 					<label class="label-form">Evento:</label>

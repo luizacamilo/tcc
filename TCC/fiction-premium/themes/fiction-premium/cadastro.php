@@ -2,16 +2,7 @@
 
 session_start();
 
-
-
-if(isset($_SESSION["erro"])){
-    $erro = $_SESSION["erro"];
-
-}
-else{
-    $erro = 0;
-    
-}
+$erro = $_SESSION["erro"];
 
 
 ?>
@@ -51,77 +42,81 @@ else{
   </head>
       
   <body>
-      <div class="containera">
-        <div class="simple-login-container">
-            <h2>Cadastre-se!</h2>
-						</br>
-            <form method="post" action="gravaCadastro.php?opcao=1"  enctype="multipart/form-data">
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="text" name="nome_user" class="form-control" placeholder="Nome">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="email" name="email_user" class="form-control" placeholder="Email">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="date" name="datanasci_user" class="form-control" placeholder="Data de Nascimento">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="password" name="senha_user" placeholder="Senha" class="form-control">
-                    </div>
-                </div>
-                <div class="file is-centered is-medium">
-                    <span class="label">Gênero</span>
-                    <div class="col-md-12 form-group">
-                        <label class="radio">
-                            <input name="genero_user" value="F" type="radio" >
-                            Feminino
-                        </label>
-                        <br>
-                        <label class="radio">
-                            <input name="genero_user" value="M" type="radio" >
-                            Masculino
-                        </label>   
-                        <br>
-                        <label class="radio">
-                            <input name="genero_user" value="N" type="radio" >
-                            Outro
-                        </label>            
-                    </div>
-                </div>
-                <div class="file is-centered is-medium">
-                    <label class="label">
-                        <span class="label">
-                            Foto para Perfil   
-                        </span>
-                        <input class="file-input is-large" type="file" name="img_user">
-                        <span class="file-cta">
-                            <span class="file-icon">
-                                <i class="fas fa-upload"></i>
-                            </span>
-                        </span>
-                    </label>
-                </div>
+    <div class="containera">
+    	<div class="simple-login-container">
+        <h2>Cadastre-se!</h2>
+				<?php if($erro==3){?>
+					<p class="error">Erro no banco de dados. Tente novamente mais tarde.</p>
+				<?php } ?>
+				</br>
+        <form method="post" action="gravaCadastro.php?opcao=1"  enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="text" name="nome_user" class="form-control" placeholder="Nome">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="email" name="email_user" class="form-control" placeholder="Email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="date" name="datanasci_user" class="form-control" placeholder="Data de Nascimento">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="password" name="senha_user" placeholder="Senha" class="form-control">
+            </div>
+          </div>
+          <div class="file is-centered is-medium">
+            <span class="label">Gênero</span>
+              <div class="col-md-12 form-group">
+                <label class="radio">
+                  <input name="genero_user" value="F" type="radio" >
+                  Feminino
+                </label>
                 <br>
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <span class="label">Já possui conta? <a href="login.php" style="color: #99ffdd;">Entrar</a></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="submit" class="btn-main" >
-                    </div>
-                </div>
-            </form>
+                <label class="radio">
+                  <input name="genero_user" value="M" type="radio" >
+                  Masculino
+                </label>   
+        	      <br>
+                <label class="radio">
+                  <input name="genero_user" value="N" type="radio" >
+                  Outro
+                </label>            
+              </div>
+						</span>
+					</div>
+          	<div class="file is-centered is-medium">
+            <label class="label">
+							<span class="label">
+								Foto para Perfil   
+							</span>
+							<input class="file-input is-large" type="file" name="img_user">
+							<span class="file-cta">
+								<span class="file-icon">
+									<i class="fas fa-upload"></i>
+								</span>
+							</span>
+            </label>
+          </div>
+          <br>
+          <div class="row">
+  	        <div class="col-md-12 form-group">
+              <span class="label">Já possui conta? <a href="login.php" style="color: #99ffdd;">Entrar</a></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="submit" class="btn-main" >
+            </div>
+          </div>		
+      	</form>
             
-        </div>
+      </div>
     </div>
 
     

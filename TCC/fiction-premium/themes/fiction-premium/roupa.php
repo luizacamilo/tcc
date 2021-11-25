@@ -162,9 +162,9 @@ else if($_SESSION["logado"] == true){
 									</div>
 									</br>
                   <?php if($rsRoupa["bazar"] == "N"){ ?>
-									<a class="btn btn-default btn-main btn-closet" href="adicionaBazar.php?idroupa=<?php echo $idroupa ?>" role="button">Colocar no Bazar</a>
+									<a class="btn btn-default btn-main btn-closet" href="movimentacaoBazar.php?idroupa=<?php echo $idroupa ?>&bazar=colocar" role="button">Colocar no Bazar</a>
                   <?php } elseif($rsRoupa["bazar"] == "S"){?>
-                  <a class="btn btn-default btn-main btn-closet" href="retirarBazar.php?idroupa=<?php echo $idroupa ?>" role="button">Retirar do Bazar</a>
+                  <a class="btn btn-default btn-main btn-closet" href="movimentacaoBazar.php?idroupa=<?php echo $idroupa ?>&bazar=retirar" role="button">Retirar do Bazar</a>
                   <?php } ?>
                 </div>
 								</br>

@@ -4,6 +4,7 @@ session_start();
 
 require_once "conexaobd.php";
 
+$erro = $_SESSION["erro"];
 $id = $_SESSION["id"];
 
 $sqlPerfil = mysqli_query($conn, "SELECT * FROM tbusuario WHERE id_user = '".$id."'");
@@ -117,6 +118,11 @@ $rsPerfil = mysqli_fetch_array($sqlPerfil);
         <div class="row">
             <div class="blog-single-content">
               <div class="blog-content-description">
+              <?php if($erro == 2){?>
+                <div>
+                  <p class="error">Não deixe nenhum campo em branco!</p>
+                </div>
+              <?php  } ?>
 								<form class="clothes-form" method="post" action="gravaCadastro.php?opcao=2&id=<?php echo $id ?>">
 									<div class="col-md-6">
 										<div class="clothes-info">

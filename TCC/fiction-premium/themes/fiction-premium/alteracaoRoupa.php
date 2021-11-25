@@ -4,18 +4,23 @@ session_start();
 
 require_once "conexaobd.php";
 
+$erro = $_SESSION["erro"];
 $id = $_SESSION["id"];
 $idroupa = $_GET["idroupa"];
 
+//Seleciona as informações da Roupa
 $sqlRoupaInfo = mysqli_query($conn, "SELECT * FROM tbroupa WHERE id_roupa='".$idroupa."'");
 $rsRoupaInfo = mysqli_fetch_array($sqlRoupaInfo);
 
+//Seleção das Tags
 $sqlTags = mysqli_query($conn,"SELECT * FROM tbtag WHERE id_user='$id'");
 $sqlNullTags = mysqli_query($conn,"SELECT * FROM tbtag WHERE id_user='$id'");
 $rsNullTags = mysqli_fetch_array($sqlNullTags);
 
+//Seleção das categorias
 $sqlCateg = mysqli_query($conn, "SELECT * FROM tbcategoria");
 
+//Adquire as tags já relacionadas a roupa
 $sqlSelectTags = mysqli_query($conn, "SELECT * FROM roupa_tag WHERE id_roupa='".$idroupa."'");
 
 
@@ -127,7 +132,11 @@ $sqlSelectTags = mysqli_query($conn, "SELECT * FROM roupa_tag WHERE id_roupa='".
         <div class="row">
             <div class="blog-single-content">
               <div class="blog-content-description">
-								
+              <?php if($erro == 2){?>
+                <div>
+                  <p class="error">Não deixe nenhum campo em branco!</p>
+                </div>
+              <?php  } ?>
 								<form id="formRoupa" class="clothes-form" method="post" action="gravaRoupa.php?opcao=2&idroupa=<?php echo $idroupa ?>" enctype="multipart/form-data">
 									<div class="col-md-6">
 										<div class="clothes-info">
@@ -139,6 +148,7 @@ $sqlSelectTags = mysqli_query($conn, "SELECT * FROM roupa_tag WHERE id_roupa='".
                       <div class="form-group">
                         <label class="label-form">Tipo da Peça:</label></br>
                         <div class="radio-table">
+                          <!-- exibição das categorias -->
                         <?php while($rsCateg = mysqli_fetch_array($sqlCateg)){ ?>
                           <div class="radio-categ"> 
                           <?php if($rsRoupaInfo["id_categ"]==$rsCateg["id_categ"]){?>
@@ -183,11 +193,12 @@ $sqlSelectTags = mysqli_query($conn, "SELECT * FROM roupa_tag WHERE id_roupa='".
                             <div class="tag-checkbox">
                                 <span>
                                 <?php 
+                                //se não existem tags já relacionadas com a roupa
                                 if (is_null($rsSelectTags = mysqli_fetch_array($sqlSelectTags))){?>
                                 <input  class="checkbox" type="checkbox" id="<?php echo $rsTags["id_tag"] ?>" name="tag[]" value="<?php echo $rsTags["id_tag"] ?>">
                                 <label for="<?php echo $rsTags["id_tag"] ?>" class="label-form tag-font"><?php echo $rsTags["nome_tag"] ?></label>
                                 </br>
-                                <?php }else{ 
+                                <?php }else{
                                   if ($rsTags["id_tag"]==$rsSelectTags["id_tag"]){ ?>
                                   <input  class="checkbox" type="checkbox" id="<?php echo $rsTags["id_tag"] ?>" name="tag[]" value="<?php echo $rsTags["id_tag"] ?>" checked>
                                   <label for="<?php echo $rsTags["id_tag"] ?>" class="label-form tag-font"><?php echo $rsTags["nome_tag"] ?></label>

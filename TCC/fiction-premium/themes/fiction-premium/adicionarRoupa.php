@@ -4,12 +4,16 @@ session_start();
 
 require_once "conexaobd.php";
 
+$erro = $_SESSION["erro"];
 $id = $_SESSION["id"];
 
+//Seleção de Tags
 $sqlTags = mysqli_query($conn,"SELECT * FROM tbtag WHERE id_user='$id'");
+//Seleção de Tags para verificação do Nulo
 $sqlNullTags = mysqli_query($conn,"SELECT * FROM tbtag WHERE id_user='$id'");
 $rsNullTags = mysqli_fetch_array($sqlNullTags);
 
+//Seleção das Categorias
 $sqlCateg = mysqli_query($conn, "SELECT * FROM tbcategoria");
 
 
@@ -43,24 +47,16 @@ $sqlCateg = mysqli_query($conn, "SELECT * FROM tbcategoria");
     <link rel="icon" href="images/icones/icone_mm_black_recortado.png" />
 
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
       #map_canvas {
         height: 100%;
       }
-      /* Optional: Makes the sample page fill the window. */
     </style>
     <script src="plugins/modernizr.min.js"></script>
   </head>
   <body>
-    <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
   <!-- Loader to display before content Load-->
   <div class="loading">
-
-    <!-- <img src="img/loader.gif" alt=""> -->
 
     <div class="windows8 loading-position">
       <div class="wBall" id="wBall_1">
@@ -120,7 +116,11 @@ $sqlCateg = mysqli_query($conn, "SELECT * FROM tbcategoria");
         <div class="row">
             <div class="blog-single-content">
               <div class="blog-content-description">
-								
+              <?php if($erro == 2){?>
+                <div>
+                  <p class="error">Não deixe nenhum campo em branco!</p>
+                </div>
+              <?php  } ?>
 								<form class="clothes-form" method="post" action="gravaRoupa.php?opcao=1" enctype="multipart/form-data">
 									<div class="col-md-6">
 										<div class="clothes-img">
@@ -146,6 +146,7 @@ $sqlCateg = mysqli_query($conn, "SELECT * FROM tbcategoria");
                       <div class="form-group">
                         <label class="label-form">Tipo da Peça:</label></br>
                         <div class="radio-table">
+                        <!-- exibição das categorias -->
                         <?php while($rsCateg = mysqli_fetch_array($sqlCateg)){ ?>
                           <div class="radio-categ">
                             <input  type="radio" name="categ_roupa" class="radio" value="<?php echo $rsCateg["id_categ"] ?>"> 
@@ -176,12 +177,15 @@ $sqlCateg = mysqli_query($conn, "SELECT * FROM tbcategoria");
                           <label class="label-form">Tags:</label>
                           </br>
                           <div class="tag-grid">
+                            <!-- exibição das tags -->
                           <?php
+                          //verifica se existem tags
                             if (is_null($rsNullTags)){ ?>
                             <div class="null-case">
                               <p class="null-text"> Você ainda não tem Tags salvas! </p>
                             </div>
                             <?php }else{
+                              //exibe as tags
                             while($rsTags = mysqli_fetch_array($sqlTags)){ ?>
                             <div class="tag-checkbox">
                                 <span>

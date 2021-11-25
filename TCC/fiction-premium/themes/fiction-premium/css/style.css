@@ -3064,6 +3064,9 @@ form .padding-left-15 {
   padding: 14px;
 }
 
+.error{
+  color: #CC3A5A;
+}
 
 /* Medium Devices, Desktops */
 /* Large Devices, Wide Screens */

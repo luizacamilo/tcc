@@ -150,9 +150,13 @@ else{
               <div class="blog-content-description">
                 <h4 class="blog-inner-heading">O Círculo Cromático</h4>
                 <p class="blog-description">
-                  Como já dito antes, as regras do círculo cromático auxiliam na criação de looks. Elas dizem que, basicamente, as cores de complementam de acordo com
-                  sua posição no círculo: regra dos terços, regra dos visinhos e regra dos opostos.
+                  Como já dito antes, as regras do círculo cromático auxiliam na criação de looks. Elas dizem que, basicamente, as cores se complementam de acordo com
+                  sua posição no círculo: complementares, análogas, ou tríades. Elas também podem ser categorizadas por temperatura, quente ou frio; ou por paletas básicas,
+                   primárias e secundárias.
                 </p>
+                <div class="blog-single-section-img">
+                  <img src="images/blog/teoria-das-cores.png" alt="Blog Single Img">
+                </div>
               </div>
             </div><!-- End Single Blog Content -->
           <!-- See All Post -->

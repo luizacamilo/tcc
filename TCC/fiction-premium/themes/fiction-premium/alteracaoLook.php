@@ -2,15 +2,18 @@
 session_start();
 require_once "conexaobd.php";
 
+$erro = $_SESSION["erro"];
 $id = $_SESSION["id"];
 $agenda = $_GET["idagenda"];
 
+//Seleção das Informações do Agendamento
 $sqlLook = mysqli_query($conn,"SELECT * FROM tbagendamento WHERE id_agenda = '".$agenda."'");
 $rsLook = mysqli_fetch_array($sqlLook);
 
 //Roupas
 $sqlRoupa = mysqli_query($conn,"SELECT * FROM tbroupa where id_user ='".$id."' and bazar = 'N'");
 
+//Seleção das Roupas
 $sqlSelectRoupa = mysqli_query($conn,"SELECT id_roupa FROM roupa_agenda WHERE id_agenda = '".$agenda."'");
 
 
@@ -129,6 +132,11 @@ else if($_SESSION["logado"] == true){
       <div class="col-md-12 form-group">
         <input type="submit" class="btn btn-default btn-main" value="Salvar">
       </div>
+      <?php if($erro == 2){?>
+      <div>
+          <p class="error">Complete todos os campos e selecione algumas roupas!</p>
+      </div>
+      <?php  } ?>
       <div class="info-looks-form">
         <div class="form-group">
 					<label class="label-form">Evento:</label>

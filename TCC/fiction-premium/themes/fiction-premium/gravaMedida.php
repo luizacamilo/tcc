@@ -17,25 +17,42 @@ $alturaPerna= $_POST["altura_pernas"];
 
 switch ($op){
   case "1":
-		$sqlMedida= mysqli_query($conn,"INSERT INTO tbmedidas (altura, largura_ombros, busto, cintura, quadril, pe, comprimento_bracos, altura_pernas, id_user) 
-		VALUES ('".$altura."', '".$larguraOmbro."', '".$busto."', '".$cintura."', '".$quadril."', '".$pe."', '".$compriBracos."', '".$alturaPerna."', '".$id."')");
+		if($altura && $larguraOmbro && $busto && $cintura && $quadril && $pe && $compriBracos && $alturaPerna){
+			$sqlMedida= mysqli_query($conn,"INSERT INTO tbmedidas (altura, largura_ombros, busto, cintura, quadril, pe, comprimento_bracos, altura_pernas, id_user) 
+			VALUES ('".$altura."', '".$larguraOmbro."', '".$busto."', '".$cintura."', '".$quadril."', '".$pe."', '".$compriBracos."', '".$alturaPerna."', '".$id."')");
 
-		$rsMedida=mysqli_affected_rows($conn);
+			$rsMedida=mysqli_affected_rows($conn);
 
-		if($rsMedida==1){
-			header("location: perfil.php");
+			if($rsMedida==1){
+				header("location: perfil.php");
+				$_SESSION["erro"]=0;
+			}
+			else{
+				header("location: medidas.php");
+				//Erro = 3 -> Erro na inserção
+				$_SESSION["erro"]=3;
+			}
 		}
 		else{
 			header("location: medidas.php");
+			$_SESSION["erro"]=2;
 		}
+		
   break;
 
 	case "2":
-		$sqlUpdMedida = mysqli_query($conn,"UPDATE tbmedidas SET altura='".$altura."',largura_ombros='".$larguraOmbro."',busto='".$busto."',cintura='".$cintura."',
-		quadril='".$quadril."',pe='".$pe."',comprimento_bracos='".$compriBracos."',altura_pernas='".$alturaPerna."' WHERE id_user='".$id."'");
-		$rsUpdMedida = mysqli_affected_rows($conn);
+		if($altura && $larguraOmbro && $busto && $cintura && $quadril && $pe && $compriBracos && $alturaPerna){
+			$sqlUpdMedida = mysqli_query($conn,"UPDATE tbmedidas SET altura='".$altura."',largura_ombros='".$larguraOmbro."',busto='".$busto."',cintura='".$cintura."',
+			quadril='".$quadril."',pe='".$pe."',comprimento_bracos='".$compriBracos."',altura_pernas='".$alturaPerna."' WHERE id_user='".$id."'");
+			$rsUpdMedida = mysqli_affected_rows($conn);
 
-		header("location: perfil.php");
+			header("location: perfil.php");
+			$_SESSION["erro"]=0;
+		}
+		else{
+			header("location: alteracaoMedidas.php");
+			$_SESSION["erro"]=2;
+		}
 	break;
 }
 

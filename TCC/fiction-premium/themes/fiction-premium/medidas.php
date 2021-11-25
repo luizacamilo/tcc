@@ -3,20 +3,8 @@ session_start();
 
 require_once "conexaobd.php";
 
+$erro = $_SESSION["erro"];
 $id = $_SESSION["id"];
-
-
-
-
-
-if(isset($_SESSION["erro"])){
-    $erro = $_SESSION["erro"];
-
-}
-else{
-    $erro = 0;
-    
-}
 
 if($_SESSION["logado"] == false){
     header("location: login.php");
@@ -112,10 +100,14 @@ else if($_SESSION["logado"] == true){
           <div class="blog-content-description">
             <h3 class="blog-inner-heading">Adicione suas medidas!</h4>
             <p class="blog-description">Lembre-se de colocar todas as medidas em cm (centímetros)!</p>
+            <?php if($erro == 2){?>
+            <div>
+              <p class="error">Não deixe nenhum campo em branco!</p>
+            </div>
+            <?php  }elseif($erro == 3){ ?>
+              <p class="error">Erro no banco de dados. Tente novamente mais tarde.</p>
+            <?php } ?>
             <form class="measuring-form" method="post" action="gravaMedida.php?opcao=1">
-              <!--
-                altura	largura_ombros	busto	cintura	quadril	pe	comprimento_bracos	altura_pernas
-              -->
               <div class="col-md-6">
                 <div class="form-group">
                   <label class="label-form">Altura:</label>
