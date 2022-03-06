@@ -1,2 +1,2 @@
 # tcc
-tcc do terceiro ano em desenvolvimento de sistemas
+Trabalho de conclusão de curso do técnico em desenvolvimento de sistemas.
